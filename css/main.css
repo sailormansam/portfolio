@@ -1,4 +1,24 @@
 /* --------------------------------------------------- *\
+	_fonts
+\* --------------------------------------------------- */
+@font-face {
+    font-family: 'fabrica';
+    src: url('../fonts/fabrica/fabrica-webfont.eot');
+    src: url('../fonts/fabrica/fabrica-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/fabrica/fabrica-webfont.woff2') format('woff2'),
+         url('../fonts/fabrica/fabrica-webfont.woff') format('woff'),
+         url('../fonts/fabrica/fabrica-webfont.ttf') format('truetype'),
+         url('../fonts/fabrica/fabrica-webfont.svg#fabrica') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+
+/* --------------------------------------------------- *\
 	_general
 \* --------------------------------------------------- */
 body {
