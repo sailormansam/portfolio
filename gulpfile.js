@@ -7,7 +7,8 @@ var gulp = require('gulp'),
 	htmlreplace = require('gulp-html-replace'),
 	copy = require('gulp-copy'),
 	webserver = require('gulp-webserver'),
-	del = require('del');
+	del = require('del'),
+	browserSync = require('browser-sync').create();
 
 gulp.task('default', ['del', 'minify-js', 'minify-css', 'imagemin', 'html-replace', 'copy-icon']);
 
@@ -55,7 +56,15 @@ gulp.task('copy-icon', ['del'], function () {
 gulp.task('webserver', function() {
 	gulp.src('/')
 		.pipe(webserver({
-			livereload: true,
+			livereload: false,
 			open: true
 		}));
+});
+
+gulp.task('sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
 });

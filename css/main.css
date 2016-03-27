@@ -26,3 +26,34 @@ body {
 	margin: 0;
 	font: normal 100% sans-serif;
 }
+
+
+
+
+
+/* --------------------------------------------------- *\
+	_parallax
+\* --------------------------------------------------- */
+header {
+	z-index: 0;
+}
+
+.parallax img {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+
+
+
+
+/* --------------------------------------------------- *\
+	_main
+\* --------------------------------------------------- */
+main {
+	margin-top: 80vh;
+	z-index: 1;
+	position: relative;
+	background-color: #fff;
+}
