@@ -10,7 +10,7 @@ function step(dt) {
 		background1.style.transform = 'translateY(' + window.scrollY * 0 + 'px)';
 
 	if(background2)
-		background2.style.transform = 'translateY(' + window.scrollY * -0.05 + 'px)';
+		background2.style.transform = 'translateY(' + window.scrollY * -0 + 'px)';
 
 	if(background3)
 		background3.style.transform = 'translateY(' + window.scrollY * -0.1 + 'px)';
