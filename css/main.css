@@ -53,10 +53,16 @@ p {
 	line-height: 1.8;
 }
 
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
 .wrapper {
 	width: 100%;
 	max-width: 64em;
 	margin: 0 auto;
+	position: relative;
 }
 
 .wrapper.small {
@@ -155,7 +161,29 @@ main::after {
 	padding: 2em 0;
 }
 
-#pillars {
-	-webkit-clip-path: url(#svgPath);
-	clip-path: url(#svgPath);
+#code {
+	-webkit-clip-path: url(#half-hex);
+	clip-path: url(#half-hex);
+}
+
+#art {
+	-webkit-clip-path: url(#half-hex);
+	clip-path: url(#half-hex);
+}
+
+#everydays {
+	margin: 8em 0;
+}
+
+.half-hex {
+	display: inline-block;
+	color: #fff;
+	position: relative;
+}
+
+.half-hex h2 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
