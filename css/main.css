@@ -67,7 +67,7 @@ a {
 }
 
 .wrapper.small {
-	max-width: 40em;
+	max-width: 35em;
 }
 
 
@@ -158,6 +158,7 @@ main::after {
 /* --------------------------------------------------- *\
 	_everyday
 \* --------------------------------------------------- */
+
 #everyday .title {
 	padding: 2em 0;
 }
@@ -194,4 +195,38 @@ main::after {
 
 .social-title img {
 	width: 3em;
+}
+
+
+
+
+
+/* --------------------------------------------------- *\
+	_projects
+\* --------------------------------------------------- */
+
+#projects {
+	margin: 20em 0;
+}
+
+
+
+
+/* --------------------------------------------------- *\
+	_about
+\* --------------------------------------------------- */
+
+#about {
+	margin-bottom: 15em;
+}
+
+#portrait-svg {
+	width: 100%;
+	max-width: 40em;
+	margin: 2em 0;
+}
+
+#portrait {
+	-webkit-clip-path: url(#full-hex);
+	clip-path: url(#full-hex);
 }
