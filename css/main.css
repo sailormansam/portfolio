@@ -206,9 +206,10 @@ main::after {
 \* --------------------------------------------------- */
 
 #projects {
-	margin: 15em 0;
-	padding: 10em 0;
+	margin: 25em 0 35em;
+	padding: 8em 0;
 	background-color: #f1f1f1;
+	position: relative;
 }
 
 .project {
@@ -221,6 +222,20 @@ main::after {
 	top: 50%;
 	color: #fff;
 	transform: translate(-50%, -50%);
+}
+
+.project-triangle {
+	position: absolute;
+	transform: translateY(-100%);
+	top: 0;
+	width: 100%;
+	left: 0;
+}
+
+.project-triangle.bottom {
+	transform: translateY(100%) rotate(180deg);
+	top: auto;
+	bottom: 0;
 }
 
 
