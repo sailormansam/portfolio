@@ -163,22 +163,12 @@ main::after {
 	padding: 2em 0;
 }
 
-#code {
-	-webkit-clip-path: url(#half-hex);
-	clip-path: url(#half-hex);
-}
-
-#art {
-	-webkit-clip-path: url(#half-hex);
-	clip-path: url(#half-hex);
-}
-
 #everydays {
 	margin: 8em 0;
 	overflow: hidden;
 }
 
-.half-hex {
+.half-hex-block {
 	display: block;
 	color: #fff;
 	position: relative;
@@ -253,9 +243,4 @@ main::after {
 	width: 100%;
 	max-width: 40em;
 	margin: 2em 0;
-}
-
-#portrait {
-	-webkit-clip-path: url(#full-hex);
-	clip-path: url(#full-hex);
 }
