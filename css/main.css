@@ -70,6 +70,10 @@ a {
 	max-width: 35em;
 }
 
+.title {
+	padding: 2em 0;
+}
+
 
 
 
@@ -159,10 +163,6 @@ main::after {
 	_everyday
 \* --------------------------------------------------- */
 
-#everyday .title {
-	padding: 2em 0;
-}
-
 #everydays {
 	margin: 8em 0;
 	overflow: hidden;
@@ -204,6 +204,12 @@ main::after {
 
 .project {
 	position: relative;
+	float: left;
+	width: 100%;
+}
+
+.project.half {
+	width: 50%;
 }
 
 .project h2 {
