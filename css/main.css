@@ -124,6 +124,10 @@ header {
 	height: auto;
 }
 
+#defs {
+	position: absolute;
+}
+
 
 
 
@@ -141,18 +145,21 @@ main::after {
 	content: "";
 	display: block;
 	background: url(../images/nat-triangle.svg) no-repeat;
-	width: 64em;
+	width: 100%;
+	max-width: 64em;
 	height: 9.7em;
 	left: 50%;
 	position: absolute;
+	background-size: 100%;
+	background-position: center bottom;
 }
 
 main::before {
-	transform: translate(-50%, -100%);
+	transform: translate(-50%, -99%);
 }
 
 main::after {
-	transform: translate(-50%, 0) rotate(180deg);
+	transform: translate(-50%, -1%) rotate(180deg);
 }
 
 
@@ -197,7 +204,6 @@ main::after {
 
 #projects {
 	margin: 25em 0 35em;
-	padding: 8em 0;
 	background-color: #f1f1f1;
 	position: relative;
 }
@@ -249,4 +255,42 @@ main::after {
 	width: 100%;
 	max-width: 40em;
 	margin: 2em 0;
+}
+
+
+
+
+
+/* --------------------------------------------------- *\
+	_responsive
+\* --------------------------------------------------- */
+
+@media all and (max-width: 80em) {
+	h1 {
+		font-size: 3em;
+	}
+}
+
+@media all and (max-width: 60em) {
+	h1 {
+		font-size: 2.5em;
+	}
+}
+
+@media all and (max-width: 50em) {
+	h1 {
+		font-size: 2.5em;
+		padding: 0 1em;
+	}
+
+	#catch h1 br {
+		display: none;
+	}
+}
+
+@media all and (max-width: 35em) {
+	h1 {
+		font-size: 2em;
+		padding: 0 1em;
+	}
 }
