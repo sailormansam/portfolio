@@ -51,6 +51,11 @@ h2 {
 p {
 	font-family: fabrica, sans-serif;
 	line-height: 1.8;
+	margin: 0;
+}
+
+p + p {
+	margin-top: 1em;
 }
 
 a {
@@ -60,8 +65,11 @@ a {
 
 .wrapper {
 	width: 100%;
-	max-width: 64em;
-	margin: 0 auto;
+	max-width: 66em;
+	padding-left: 1em;
+	padding-right: 1em;
+	margin-right: auto;
+	margin-left: auto;
 	position: relative;
 	overflow: hidden;
 }
@@ -90,6 +98,8 @@ a {
 	background-position: center bottom;
 	background-size: cover;
 	top: 0;
+
+	transition: all 0.5s ease;
 }
 
 
@@ -104,6 +114,8 @@ header {
 	height: 100vh;
 	width: 100%;
 	text-align: center;
+
+	transition: all 0.5s ease;
 }
 
 #catch {
@@ -156,6 +168,7 @@ main::after {
 
 main::before {
 	transform: translate(-50%, -99%);
+	top: 1px;
 }
 
 main::after {
@@ -269,11 +282,19 @@ main::after {
 	h1 {
 		font-size: 3em;
 	}
+
+	h2 {
+		font-size: 1.8em;
+	}
 }
 
 @media all and (max-width: 60em) {
 	h1 {
 		font-size: 2.5em;
+	}
+
+	h2 {
+		font-size: 1.5em;
 	}
 }
 
