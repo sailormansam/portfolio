@@ -216,7 +216,7 @@ main::after {
 \* --------------------------------------------------- */
 
 #projects {
-	margin: 25em 0 35em;
+	margin: 20vw 0 30vw;
 	background-color: #f1f1f1;
 	position: relative;
 }
@@ -239,6 +239,10 @@ main::after {
 	transform: translate(-50%, -50%);
 }
 
+.project svg {
+	max-width: 40em;
+}
+
 .project-triangle {
 	position: absolute;
 	transform: translateY(-100%);
@@ -256,18 +260,32 @@ main::after {
 
 
 
+
+
 /* --------------------------------------------------- *\
 	_about
 \* --------------------------------------------------- */
 
 #about {
-	margin-bottom: 15em;
+	padding-bottom: 15em;
 }
 
 #portrait-svg {
 	width: 100%;
 	max-width: 40em;
 	margin: 2em 0;
+}
+
+
+
+
+
+/* --------------------------------------------------- *\
+	_footer
+\* --------------------------------------------------- */
+
+footer {
+	margin-top: 10em;
 }
 
 
@@ -285,6 +303,12 @@ main::after {
 
 	h2 {
 		font-size: 1.8em;
+	}
+}
+
+@media all and (max-width: 64em) {
+	footer {
+		margin-top: 15vw;
 	}
 }
 
@@ -313,5 +337,17 @@ main::after {
 	h1 {
 		font-size: 2em;
 		padding: 0 1em;
+	}
+
+	#everyday .title {
+		padding: 4em 0 2em;
+	}
+
+	#about {
+		padding-bottom: 5em;
+	}
+
+	#portrait-svg {
+		margin-top: 0;
 	}
 }
