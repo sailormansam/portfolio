@@ -339,6 +339,10 @@ footer {
 		padding: 0 1em;
 	}
 
+	#everydays {
+		margin: 5em 0;
+	}
+
 	#everyday .title {
 		padding: 4em 0 2em;
 	}
