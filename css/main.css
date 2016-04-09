@@ -45,14 +45,14 @@ h1 {
 h2 {
 	font-size: 2.1em;
 	text-transform: uppercase;
-	line-height: 1.8;
+	line-height: 1.6;
 }
 
 p {
+	font-size: 1.3em;
 	font-family: fabrica, sans-serif;
 	line-height: 1.6;
 	margin: 0;
-	font-size: 1.3em;
 }
 
 p + p {
@@ -66,9 +66,9 @@ a {
 
 .wrapper {
 	width: 100%;
-	max-width: 66em;
-	padding-left: 1em;
-	padding-right: 1em;
+	max-width: 68rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
 	margin-right: auto;
 	margin-left: auto;
 	position: relative;
@@ -76,11 +76,11 @@ a {
 }
 
 .wrapper.small {
-	max-width: 35em;
+	max-width: 44rem;
 }
 
 .title {
-	padding: 2em 0;
+	padding: 4rem 0;
 }
 
 
@@ -186,8 +186,13 @@ main::after {
 	_everyday
 \* --------------------------------------------------- */
 
+#everyday {
+	padding: 4em 0;
+}
+
 #everydays {
-	margin: 8em 0;
+	margin-top: 4rem;
+	margin-bottom: 4rem;
 	overflow: hidden;
 }
 
@@ -219,9 +224,34 @@ main::after {
 \* --------------------------------------------------- */
 
 #projects {
-	margin: 20vw 0 30vw;
+	margin: 16em 0;
 	background-color: #f1f1f1;
 	position: relative;
+	padding: 4em 0;
+}
+
+#projects::before,
+#projects::after {
+	content: "";
+	display: block;
+	background: url(../images/nat-triangle-grey.svg) no-repeat;
+	width: 100%;
+	max-width: 64em;
+	height: 9.7em;
+	left: 50%;
+	position: absolute;
+	background-size: 100%;
+	background-position: center bottom;
+}
+
+#projects::before {
+	transform: translate(-50%, -99%);
+	top: 1px;
+}
+
+#projects::after {
+	transform: translate(-50%, 99%) rotate(180deg);
+	bottom: 0;
 }
 
 .project {
@@ -248,14 +278,14 @@ main::after {
 
 .project-triangle {
 	position: absolute;
-	transform: translateY(-100%);
+	transform: translateY(-99%);
 	top: 0;
 	width: 100%;
 	left: 0;
 }
 
 .project-triangle.bottom {
-	transform: translateY(100%) rotate(180deg);
+	transform: translateY(99%) rotate(180deg);
 	top: auto;
 	bottom: 0;
 }
@@ -270,13 +300,13 @@ main::after {
 \* --------------------------------------------------- */
 
 #about {
-	padding-bottom: 15em;
+	padding-bottom: 16em;
 }
 
-#portrait-svg {
+#portrait {
 	width: 100%;
 	max-width: 40em;
-	margin: 2em 0;
+	margin-bottom: 2em;
 }
 
 
@@ -354,7 +384,7 @@ footer {
 		padding-bottom: 5em;
 	}
 
-	#portrait-svg {
+	#portrait {
 		margin-top: 0;
 	}
 }
