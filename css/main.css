@@ -72,7 +72,16 @@ a {
 	margin-right: auto;
 	margin-left: auto;
 	position: relative;
-	overflow: hidden;
+}
+
+.wrapper:before,
+.wrapper:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.wrapper:after {
+    clear: both;
 }
 
 .wrapper.small {
@@ -193,15 +202,13 @@ main::after {
 #everydays {
 	margin-top: 4rem;
 	margin-bottom: 4rem;
-	overflow: hidden;
+	display: flex;
 }
 
 .half-hex-block {
 	display: block;
 	color: #fff;
 	position: relative;
-	width: 50%;
-	float: left;
 }
 
 .social-title {
@@ -256,8 +263,8 @@ main::after {
 
 .project {
 	position: relative;
-	float: left;
 	width: 100%;
+	margin-bottom: 16em;
 }
 
 .project.half {
