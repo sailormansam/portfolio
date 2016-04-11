@@ -13,7 +13,7 @@ var gulp = require('gulp'),
 gulp.task('default', ['del', 'minify-js', 'minify-css', 'imagemin', 'html-replace', 'copy-icon']);
 
 gulp.task('dev', function () {
-	gulp.start('webserver');
+	gulp.start('sync');
 });
 
 gulp.task('del', function (cb) {

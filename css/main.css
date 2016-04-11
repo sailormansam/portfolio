@@ -264,7 +264,8 @@ main::after {
 .project {
 	position: relative;
 	width: 100%;
-	margin-bottom: 16em;
+	cursor: pointer;
+	display: block;
 }
 
 .project.half {
@@ -277,10 +278,6 @@ main::after {
 	top: 50%;
 	color: #fff;
 	transform: translate(-50%, -50%);
-}
-
-.project svg {
-	max-width: 40em;
 }
 
 .project-triangle {
@@ -321,6 +318,23 @@ main::after {
 
 
 /* --------------------------------------------------- *\
+	_modal
+\* --------------------------------------------------- */
+#modal {
+	position: fixed;
+	height: 10em;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #fff;
+	z-index: 1;
+}
+
+
+
+
+
+/* --------------------------------------------------- *\
 	_footer
 \* --------------------------------------------------- */
 
@@ -336,16 +350,6 @@ footer {
 	_responsive
 \* --------------------------------------------------- */
 
-@media all and (max-width: 80em) {
-	h1 {
-		font-size: 3em;
-	}
-
-	h2 {
-		font-size: 1.8em;
-	}
-}
-
 @media all and (max-width: 64em) {
 	footer {
 		margin-top: 15vw;
@@ -354,11 +358,15 @@ footer {
 
 @media all and (max-width: 60em) {
 	h1 {
-		font-size: 2.5em;
+		font-size: 2.6em;
 	}
 
 	h2 {
-		font-size: 1.5em;
+		font-size: 1.6em;
+	}
+
+	p {
+		font-size: 1em;
 	}
 }
 
