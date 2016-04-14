@@ -127,7 +127,8 @@
 			</svg>
 			<p class="wrapper small">I create every day because I always want to learn and gain new insights into how the digital world around me works. Setting the expectation of working every day for me means I’m always making progress and not waiting for inspiration.</p>
 		</section>
-		<section id="modal">
+		<section id="modal" ng-class="{ 'active': p.showModal }">
+			<button class="close" ng-click="p.hideModal()">x</button>
 			<ng-view></ng-view>
 		</section>
 	</main>

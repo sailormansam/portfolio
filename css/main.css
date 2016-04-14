@@ -322,12 +322,30 @@ main::after {
 \* --------------------------------------------------- */
 #modal {
 	position: fixed;
-	height: 10em;
+	height: 100vh;
 	right: 0;
 	bottom: 0;
 	left: 0;
 	background-color: #fff;
+	visibility: hidden;
+	opacity: 0;
 	z-index: 1;
+
+	transition: all 0.4s ease-in-out;
+}
+
+#modal.active {
+	visibility: visible;
+	opacity: 1;
+}
+
+.close {
+	font-size: 4em;
+	font-weight: bold;
+	line-height: 1ex;
+	background: none;
+	outline: none;
+	border: none;
 }
 
 
