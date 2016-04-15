@@ -17,7 +17,7 @@
 	<script src="js/app.js"></script>
 	<script src="js/controllers/ProjectCtrl.js"></script>
 
-	<base href="/">
+	<base href="/#">
 </head>
 <body>
 	<svg id="defs" width="0" height="0">
@@ -129,7 +129,7 @@
 		</section>
 		<section id="modal" ng-class="{ 'active': p.showModal }">
 			<button class="close" ng-click="p.hideModal()">x</button>
-			<ng-view></ng-view>
+			<ng-include src="p.template"></ng-include>
 		</section>
 	</main>
 	<footer>
