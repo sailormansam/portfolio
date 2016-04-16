@@ -4,6 +4,7 @@ app.controller('ProjectCtrl', function ($location) {
 
 	this.hideModal = function () {
 		this.showModal = false;
+		$location.hash('');
 	}
 
 	this.openProject = function (title) {
