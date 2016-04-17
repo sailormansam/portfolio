@@ -89,7 +89,7 @@ a {
 }
 
 .title {
-	padding: 4rem 0;
+	padding: 1.9em 0;
 }
 
 
@@ -131,7 +131,7 @@ a {
 \* --------------------------------------------------- */
 #hero {
 	width: 100%;
-	height: 100vh;
+	height: 105vh;
 	position: fixed;
 	background-image: url(../images/hero.jpg);
 	background-repeat: no-repeat;
@@ -167,6 +167,8 @@ header {
 	left: 50%;
 	width: 100%;
 	transform: translate(-50%, -50%);
+	padding-right: 1em;
+	padding-left: 1em;
 }
 
 #catch h1 {
@@ -226,19 +228,22 @@ main::after {
 \* --------------------------------------------------- */
 
 #everyday {
-	padding: 4em 0;
+	padding: 4em 0 8em;
 }
 
 #everydays {
-	margin-top: 6rem;
-	margin-bottom: 4rem;
+	margin-top: 6em;
+	margin-bottom: 4em;
 	display: flex;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 .half-hex-block {
 	display: block;
 	color: #fff;
 	position: relative;
+	width: 50%;
 }
 
 .social-title {
@@ -261,10 +266,10 @@ main::after {
 \* --------------------------------------------------- */
 
 #projects {
-	margin: 16em 0;
+	margin: 9.7em 0;
 	background-color: #f1f1f1;
 	position: relative;
-	padding: 4em 0;
+	padding: 4em 0 8em;
 }
 
 #projects::before,
@@ -287,7 +292,7 @@ main::after {
 }
 
 #projects::after {
-	transform: translate(-50%, 99%) rotate(180deg);
+	transform: translate(-50%, 98%) rotate(180deg);
 	bottom: 0;
 }
 
@@ -297,7 +302,11 @@ main::after {
 	cursor: pointer;
 	display: block;
 	max-width: 55em;
-	margin: 0 auto 4em;
+	margin: 0 auto;
+}
+
+.project + .project {
+	margin-top: 4em;
 }
 
 .project.half {
@@ -312,20 +321,6 @@ main::after {
 	transform: translate(-50%, -50%);
 }
 
-.project-triangle {
-	position: absolute;
-	transform: translateY(-99%);
-	top: 0;
-	width: 100%;
-	left: 0;
-}
-
-.project-triangle.bottom {
-	transform: translateY(99%) rotate(180deg);
-	top: auto;
-	bottom: 0;
-}
-
 
 
 
@@ -336,13 +331,13 @@ main::after {
 \* --------------------------------------------------- */
 
 #about {
-	padding-bottom: 16em;
+	padding: 4em 0 8em;
 }
 
 #portrait {
 	width: 100%;
 	max-width: 40em;
-	margin-bottom: 2em;
+	margin-bottom: 4em;
 }
 
 
@@ -350,7 +345,7 @@ main::after {
 
 
 /* --------------------------------------------------- *\
-	_modal
+	_project detail
 \* --------------------------------------------------- */
 
 .close {
@@ -372,6 +367,27 @@ main::after {
 
 footer {
 	margin-top: 10em;
+	padding: 2em 0;
+}
+
+footer ul {
+	padding: 0;
+	margin: 0;
+}
+
+footer li {
+	display: inline-block;
+}
+
+footer a {
+	width: 3em;
+	margin: 0 1em;
+	display: block;
+}
+
+footer a img {
+	width: 100%;
+	height: auto;
 }
 
 
@@ -383,6 +399,10 @@ footer {
 \* --------------------------------------------------- */
 
 @media all and (max-width: 64em) {
+	#projects {
+		margin: 15vw 0;
+	}
+
 	footer {
 		margin-top: 15vw;
 	}
@@ -394,44 +414,30 @@ footer {
 	}
 
 	h2 {
-		font-size: 1.6em;
-	}
-
-	p {
-		font-size: 1em;
+		font-size: 1.8em;
 	}
 }
 
 @media all and (max-width: 50em) {
 	h1 {
 		font-size: 2.5em;
-		padding: 0 1em;
 	}
 
 	#catch h1 br {
 		display: none;
+	}
+
+	p {
+		font-size: 1.1em;
 	}
 }
 
 @media all and (max-width: 35em) {
 	h1 {
 		font-size: 2em;
-		padding: 0 1em;
 	}
 
-	#everydays {
-		margin: 5em 0;
-	}
-
-	#everyday .title {
-		padding: 4em 0 2em;
-	}
-
-	#about {
-		padding-bottom: 5em;
-	}
-
-	#portrait {
-		margin-top: 0;
+	p {
+		font-size: 1em;
 	}
 }

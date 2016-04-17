@@ -4,6 +4,8 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 	$routeProvider
 		.when('/', {
 			templateUrl : 'pages/home.html',
+			controller: 'HomeCtrl',
+			controllerAs: 'h'
 		})
 		.when('/ombuds', {
 			templateUrl : 'pages/project.html',
@@ -32,6 +34,8 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 		})
 		.otherwise({
 			templateUrl: 'pages/home.html',
+			controller: 'HomeCtrl',
+			controllerAs: 'h'
 		});
 
 	$locationProvider.html5Mode(true);
