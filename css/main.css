@@ -96,6 +96,36 @@ a {
 
 
 
+
+/* --------------------------------------------------- *\
+	_animation
+\* --------------------------------------------------- */
+
+@keyframes in {
+	0%		{ opacity: 0; }
+	100%	{ opacity: 1; }
+}
+
+@keyframes out {
+	0%		{ opacity: 1; }
+	100%	{ opacity: 0; }
+}
+
+.ng-enter { 
+	animation: in 0.5s both ease-in;
+	z-index: 1; 
+}
+
+.ng-leave { 
+	animation: out 0.5s both ease-in;
+	z-index: -1; 
+}
+
+
+
+
+
+
 /* --------------------------------------------------- *\
 	_hero
 \* --------------------------------------------------- */
@@ -200,7 +230,7 @@ main::after {
 }
 
 #everydays {
-	margin-top: 4rem;
+	margin-top: 6rem;
 	margin-bottom: 4rem;
 	display: flex;
 }
@@ -266,6 +296,8 @@ main::after {
 	width: 100%;
 	cursor: pointer;
 	display: block;
+	max-width: 55em;
+	margin: 0 auto 4em;
 }
 
 .project.half {
@@ -320,24 +352,6 @@ main::after {
 /* --------------------------------------------------- *\
 	_modal
 \* --------------------------------------------------- */
-#modal {
-	position: fixed;
-	height: 100vh;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background-color: #fff;
-	visibility: hidden;
-	opacity: 0;
-	z-index: 1;
-
-	transition: all 0.4s ease-in-out;
-}
-
-#modal.active {
-	visibility: visible;
-	opacity: 1;
-}
 
 .close {
 	font-size: 4em;

@@ -1,5 +1,38 @@
-var app = angular.module('portfolio', []);
+var app = angular.module('portfolio', ['ngRoute', 'ngAnimate']);
 
-app.config(function($locationProvider) {
-	$locationProvider.html5Mode(true).hashPrefix('#');;
-});
+app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+	$routeProvider
+		.when('/', {
+			templateUrl : 'pages/home.html',
+		})
+		.when('/ombuds', {
+			templateUrl : 'pages/project.html',
+			controller: 'ProjectCtrl',
+			controllerAs: 'p'
+		})
+		.when('/weatrit', {
+			templateUrl : 'pages/project.html',
+			controller: 'ProjectCtrl',
+			controllerAs: 'p'
+		})
+		.when('/crr', {
+			templateUrl : 'pages/project.html',
+			controller: 'ProjectCtrl',
+			controllerAs: 'p'
+		})
+		.when('/spectrum', {
+			templateUrl : 'pages/project.html',
+			controller: 'ProjectCtrl',
+			controllerAs: 'p'
+		})
+		.when('/leafco', {
+			templateUrl : 'pages/project.html',
+			controller: 'ProjectCtrl',
+			controllerAs: 'p'
+		})
+		.otherwise({
+			templateUrl: 'pages/home.html',
+		});
+
+	$locationProvider.html5Mode(true);
+}]);
