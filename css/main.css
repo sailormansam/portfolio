@@ -113,12 +113,12 @@ a {
 
 .ng-enter { 
 	animation: in 0.5s both ease-in;
-	z-index: 1; 
+	z-index: 20; 
 }
 
 .ng-leave { 
-	animation: out 0.5s both ease-in;
-	z-index: -1; 
+	animation: out 0.1s both ease-in;
+	z-index: -1;
 }
 
 
@@ -355,6 +355,9 @@ main::after {
 	background: none;
 	outline: none;
 	border: none;
+	position: absolute;
+	right: 1rem;
+	top: 1rem;
 }
 
 
