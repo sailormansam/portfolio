@@ -98,7 +98,7 @@ a {
 
 
 /* --------------------------------------------------- *\
-	_animation
+	_animation view
 \* --------------------------------------------------- */
 
 @keyframes in {
@@ -108,17 +108,25 @@ a {
 
 @keyframes out {
 	0%		{ opacity: 1; }
-	100%	{ opacity: 0; }
+	100%	{ opacity: 1; }
 }
 
 .ng-enter { 
-	animation: in 0.5s both ease-in;
+	animation: in 500ms both ease-out;
 	z-index: 20; 
+	position: fixed;
+	top: 0;
+	width: 100%;
+	min-height: 100vh;
 }
 
 .ng-leave { 
-	animation: out 0.1s both ease-in;
+	animation: out 500ms both ease-in;
 	z-index: -1;
+}
+
+#view {
+	background-color: #fff;
 }
 
 
@@ -139,7 +147,6 @@ a {
 	background-size: cover;
 	will-change: transform;
 	top: 0;
-	z-index: -1;
 
 	transition: all 0.5s ease;
 }
