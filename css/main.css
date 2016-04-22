@@ -33,7 +33,7 @@ body {
 	color: #333;
 }
 
-h1, h2 {
+h1, h2, h3 {
 	font-family: Montserrat, sans-serif;
 	margin: 0;
 }
@@ -45,6 +45,12 @@ h1 {
 h2 {
 	font-size: 2.1em;
 	text-transform: uppercase;
+	line-height: 1.6;
+}
+
+h3 {
+	font-size: 3.4em;
+	color: #8A8989;
 	line-height: 1.6;
 }
 
@@ -127,6 +133,7 @@ a {
 
 #view {
 	background-color: #fff;
+	padding-bottom: 8em;
 }
 
 
@@ -203,8 +210,7 @@ main {
 	background-color: #fff;
 }
 
-main::before,
-main::after {
+main::before {
 	content: "";
 	display: block;
 	background: url(../images/nat-triangle.svg) no-repeat;
@@ -220,10 +226,6 @@ main::after {
 main::before {
 	transform: translate(-50%, -99%);
 	top: 1px;
-}
-
-main::after {
-	transform: translate(-50%, -1%) rotate(180deg);
 }
 
 
@@ -328,6 +330,54 @@ main::after {
 	transform: translate(-50%, -50%);
 }
 
+.media {
+	margin-top: 4em;
+	margin-bottom: 4em;
+}
+
+.website {
+	padding-top: 60%;
+}
+
+.website img {
+	display: block;
+	box-shadow: 0 0 75px 0px rgba(0,0,0,0.2);
+}
+
+.desktop {
+	width: 90%;
+	position: absolute;
+	top: 0;
+}
+
+.tablet {
+	width: 40%;
+	position: absolute;
+	right: 4em;
+	bottom: 2em;
+}
+
+.mobile {
+	width: 15%;
+	position: absolute;
+	bottom: 0;
+	left: 42%;
+}
+
+.technology {
+	list-style-type: none;
+}
+
+.technology li {
+	display: inline-block;
+	font-weight: bold;
+	font-family: montserrat;
+	color: #4d9e90;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	margin: 0 0.5em;
+}
+
 
 
 
@@ -378,6 +428,7 @@ main::after {
 footer {
 	margin-top: 10em;
 	padding: 2em 0;
+	position: relative;
 }
 
 footer ul {
