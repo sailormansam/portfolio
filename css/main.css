@@ -133,7 +133,6 @@ a {
 
 #view {
 	background-color: #fff;
-	padding-bottom: 8em;
 }
 
 
@@ -275,17 +274,14 @@ main::before {
 \* --------------------------------------------------- */
 
 #projects {
-	margin: 9.7em 0;
-	background-color: #f1f1f1;
 	position: relative;
 	padding: 4em 0 8em;
 }
 
-#projects::before,
 #projects::after {
 	content: "";
 	display: block;
-	background: url(../images/nat-triangle-grey.svg) no-repeat;
+	background: url(../images/nat-triangle.svg) no-repeat;
 	width: 100%;
 	max-width: 64em;
 	height: 9.7em;
@@ -310,8 +306,9 @@ main::before {
 	width: 100%;
 	cursor: pointer;
 	display: block;
-	max-width: 55em;
+	max-width: 64em;
 	margin: 0 auto;
+	z-index: 5;
 }
 
 .project + .project {
@@ -328,6 +325,26 @@ main::before {
 	top: 50%;
 	color: #fff;
 	transform: translate(-50%, -50%);
+}
+
+.project-block {
+	position: relative;
+	margin-bottom: 8em;
+}
+
+.project:hover + .color {
+	width: 100%;
+	transform: skewY(-16.8deg) scaleX(1);
+}
+
+.color {
+	width: 100%;
+	height: 33.4em;
+	position: absolute;
+	top: 0;
+	transform: skewY(-16.8deg) scaleX(0);
+	transform-origin: center;
+	transition: all 0.5s ease;
 }
 
 .media {
