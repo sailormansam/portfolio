@@ -453,9 +453,10 @@ main::before {
 	background: none;
 	outline: none;
 	border: none;
-	position: absolute;
+	position: fixed;
 	right: 1rem;
 	top: 1rem;
+	z-index: 1;
 }
 
 
