@@ -36,3 +36,12 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 
 	$locationProvider.html5Mode(true);
 }]);
+
+// This is the key to view transition happiness! Mike Robinson
+app.run(function ($rootScope, $timeout, $window) {
+  $rootScope.$on('$routeChangeSuccess', function () {
+    $timeout(function () {
+      $window.scrollTo(0,0);
+    }, 700);
+  });
+});
