@@ -636,4 +636,8 @@ footer a img {
 	.project-block + .project-block {
 		margin-top: 4em;
 	}
+
+	.mobile {
+		bottom: -1em;
+	}
 }
