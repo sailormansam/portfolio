@@ -331,7 +331,10 @@ main::before {
 
 .project-block {
 	position: relative;
-	margin-bottom: 8em;
+}
+
+.project-block + .project-block {
+	margin-top: 8em;
 }
 
 .project:hover + .stripe {
@@ -479,28 +482,34 @@ main::before {
 .cover {
 	height: 0.7em;
 	position: absolute;
-	top: 0;
+	top: 50%;
 	left: 0;
 	color: #fff;
 	overflow: hidden;
 	background-color: #493944;
 	transform-origin: center top;
-	transform: skewY(-16deg);
+	transform: skewY(-16.8deg) translateY(-50%);
 	transition: all 300ms cubic-bezier(0.22, 0.61, 0.36, 1);
-	height: 2px;
+	height: 0;
 	padding: 0 0.5em;
 }
 
 .swipe:hover .cover {
-	transform: skewY(-16deg);
-	height: 62%;
+	transform: skewY(-16.8deg) translateY(-50%);
+	height: 100%;
+}
+
+.swipe:hover .cover span {
+	transform: skewY(16.8deg) translateY(-50%);
 }
 
 .cover span {
 	transform-origin: center top;
-	transform: skewY(16deg);
+	top: 50%;
+	transition: all 0.3s ease;
+	position: relative;
+	transform: skewY(16.8deg) translateY(-50%);
 	display: block;
-	text-transform: uppercase;
 }
 
 
@@ -567,11 +576,7 @@ footer a img {
 
 @media all and (max-width: 64em) {
 	#projects {
-		margin: 15vw 0;
-	}
-
-	footer {
-		margin-top: 15vw;
+		padding: 4em 0;
 	}
 }
 
@@ -587,6 +592,10 @@ footer a img {
 	h3 {
 		font-size: 2.6em;
 	}
+
+	footer {
+		padding: 30vw 0 2em;
+	}
 }
 
 @media all and (max-width: 50em) {
@@ -598,12 +607,12 @@ footer a img {
 		font-size: 2.5em;
 	}
 
-	#catch h1 br {
-		display: none;
-	}
-
 	p {
 		font-size: 1.1em;
+	}
+
+	#catch h1 br {
+		display: none;
 	}
 }
 
@@ -618,5 +627,13 @@ footer a img {
 
 	p {
 		font-size: 1em;
+	}
+
+	#everyday {
+		padding: 4em 0 2em;
+	}
+
+	.project-block + .project-block {
+		margin-top: 4em;
 	}
 }
