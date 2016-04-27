@@ -34,7 +34,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 			templateUrl: 'pages/home.html',
 		});
 
-	// $locationProvider.html5Mode(true);
+	$locationProvider.html5Mode(true);
 }]);
 
 // This is the key to view transition happiness! Mike Robinson
