@@ -638,10 +638,6 @@ footer a img {
 	h3 {
 		font-size: 2.6em;
 	}
-
-	footer {
-		padding: 30vw 0 2em;
-	}
 }
 
 @media all and (max-width: 50em) {
@@ -655,6 +651,10 @@ footer a img {
 
 	p {
 		font-size: 1.1em;
+	}
+
+	footer {
+		padding: 25vw 0 2em;
 	}
 }
 
@@ -670,6 +670,18 @@ footer a img {
 
 	main::before {
 		max-width: 25em;
+	}
+
+	#everyday {
+		padding: 4em 0;
+	}
+
+	#everydays {
+		max-width: 30em;
+	}
+
+	.project {
+		width: 85%;
 	}
 }
 
