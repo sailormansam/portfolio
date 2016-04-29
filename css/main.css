@@ -177,10 +177,10 @@ header {
 #catch {
 	position: absolute;
 	color: #fff;
-	bottom: 18%;
+	bottom: 38%;
 	left: 50%;
 	width: 100%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, 50%);
 	padding-right: 1em;
 	padding-left: 1em;
 }
@@ -582,7 +582,26 @@ footer a img {
 	_responsive
 \* --------------------------------------------------- */
 
-@media all and (max-width: 64em) {
+@media all and (max-width: 90em) {
+	#catch {
+		bottom: 32%;
+	}
+
+	main::before {
+		max-width: 45em;
+	}
+}
+
+@media all and (max-width: 70em) {
+	h1 {
+		font-size: 2.6em;
+	}
+
+	#catch {
+		bottom: 32%;
+		width: 80%;
+	}
+
 	#projects {
 		padding: 4em 0;
 	}
@@ -592,7 +611,7 @@ footer a img {
 	}
 }
 
-@media all and (max-width: 64em) and (orientation: landscape) {
+/*@media all and (max-width: 64em) and (orientation: landscape) {
 	h1 {
 		font-size: 2.6em;
 	}
@@ -605,7 +624,7 @@ footer a img {
 	main::before {
 		width: 60%;
 	}
-}
+}*/
 
 @media all and (max-width: 60em) {
 	h1 {
@@ -645,8 +664,12 @@ footer a img {
 		font-size: 1.8em;
 	}
 
+	#catch {
+		bottom: 35%;
+	}
+
 	main::before {
-		width: 60%;
+		max-width: 25em;
 	}
 }
 
