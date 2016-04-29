@@ -177,7 +177,7 @@ header {
 #catch {
 	position: absolute;
 	color: #fff;
-	top: 60%;
+	bottom: 18%;
 	left: 50%;
 	width: 100%;
 	transform: translate(-50%, -50%);
@@ -186,7 +186,7 @@ header {
 }
 
 #catch h1 {
-	margin: 1em 0 0;
+	text-shadow: 0 0 0.3em rgba(0,0,0,0.2);
 }
 
 #logo {
@@ -586,6 +586,25 @@ footer a img {
 	#projects {
 		padding: 4em 0;
 	}
+
+	#catch br {
+		display: none;
+	}
+}
+
+@media all and (max-width: 64em) and (orientation: landscape) {
+	h1 {
+		font-size: 2.6em;
+	}
+
+	#catch {
+		width: 80%;
+		top: 70%;
+	}
+
+	main::before {
+		width: 60%;
+	}
 }
 
 @media all and (max-width: 60em) {
@@ -618,9 +637,16 @@ footer a img {
 	p {
 		font-size: 1.1em;
 	}
+}
 
-	#catch h1 br {
-		display: none;
+
+@media all and (max-width: 50em) and (orientation: landscape) {
+	h1 {
+		font-size: 1.8em;
+	}
+
+	main::before {
+		width: 60%;
 	}
 }
 
