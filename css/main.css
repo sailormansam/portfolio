@@ -11,7 +11,6 @@
          url('../fonts/fabrica/fabrica-webfont.svg#fabrica') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 
@@ -59,6 +58,7 @@ p {
 	font-family: fabrica, sans-serif;
 	line-height: 1.6;
 	margin: 0;
+	text-align: left;
 }
 
 p + p {
@@ -448,7 +448,7 @@ main::before {
 }
 
 .brief {
-	margin: 0.3em 0 0.8em;
+	margin: 0.8em 0 0.3em;
 }
 
 .technology {
@@ -479,12 +479,12 @@ main::before {
 	position: relative;
 	display: inline-block;
 	color: #493944;
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: bold;
 	font-family: Montserrat;
 	text-transform: uppercase;
 	padding: 0 0.5em;
-	margin: 2rem 0;
+	margin: 1.6rem 0;
 }
 
 .cover {
@@ -653,8 +653,17 @@ footer a img {
 		font-size: 1.1em;
 	}
 
+	.wrapper {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
 	footer {
 		padding: 25vw 0 2em;
+	}
+
+	.mobile {
+		left: 32%;
 	}
 }
 
