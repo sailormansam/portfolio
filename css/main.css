@@ -148,7 +148,7 @@ ul {
 	width: 100%;
 	height: 105vh;
 	position: fixed;
-	background-image: url(../images/hero-me.jpg);
+	background-image: url(../images/hero-side.jpg);
 	background-repeat: no-repeat;
 	background-position: center bottom;
 	background-size: cover;
@@ -177,16 +177,25 @@ header {
 #catch {
 	position: absolute;
 	color: #fff;
-	bottom: 38%;
-	left: 50%;
-	width: 100%;
+	bottom: 50%;
+	left: 30%;
 	transform: translate(-50%, 50%);
 	padding-right: 1em;
 	padding-left: 1em;
+	text-align: left;
 }
 
 #catch h1 {
 	text-shadow: 0 0 0.3em rgba(0,0,0,0.2);
+}
+
+#catch h2 {
+	text-transform: none;
+	line-height: 1.3;
+}
+
+#catch span {
+	font-size: 0.8em;
 }
 
 #logo {
@@ -335,6 +344,17 @@ main::before {
 
 .project-block + .project-block {
 	margin-top: 8em;
+}
+
+.project-block h1 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	color: #fff;
+	font-size: 6em;
+	transform: translate(-50%, -50%);
+	text-shadow: 0 0 0.3em rgba(0,0,0,0.2);
+	line-height: 1;
 }
 
 .stripe {
