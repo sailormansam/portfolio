@@ -49,7 +49,7 @@ h2 {
 
 h3 {
 	font-size: 3.4em;
-	color: #bfbfbf;
+	color: #4D9E90;
 	line-height: 1;
 }
 
@@ -423,6 +423,8 @@ main::before {
 
 .website {
 	padding-top: 60%;
+	max-width: 60em;
+	margin: 0 auto;
 	position: relative;
 }
 
@@ -458,7 +460,7 @@ main::before {
 }
 
 .mobile {
-	width: 15%;
+	width: 16.66%;
 	position: absolute;
 	bottom: -2em;
 	left: 42%;
@@ -480,7 +482,7 @@ main::before {
 	display: inline-block;
 	font-weight: bold;
 	font-family: montserrat;
-	color: #4d9e90;
+	color: #bfbfbf;
 	text-transform: uppercase;
 	font-size: 1.5em;
 	margin: 0 0.5em;
@@ -517,7 +519,7 @@ main::before {
 	background-color: #493944;
 	transform-origin: center top;
 	transform: skewY(-16.8deg) translateY(-50%);
-	transition: all 300ms cubic-bezier(0.22, 0.61, 0.36, 1);
+	transition: all 250ms cubic-bezier(0.22, 0.61, 0.36, 1);
 	height: 0;
 	padding: 0 0.5em;
 }

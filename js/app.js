@@ -10,12 +10,12 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 			controller: 'ProjectCtrl',
 			controllerAs: 'p'
 		})
-		.when('/weatrit', {
+		.when('/women-in-engineering', {
 			templateUrl : 'pages/project.html',
 			controller: 'ProjectCtrl',
 			controllerAs: 'p'
 		})
-		.when('/crr', {
+		.when('/impact', {
 			templateUrl : 'pages/project.html',
 			controller: 'ProjectCtrl',
 			controllerAs: 'p'
