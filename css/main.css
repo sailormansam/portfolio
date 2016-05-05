@@ -38,11 +38,11 @@ h1, h2, h3 {
 }
 
 h1 {
-	font-size: 3.4em;
+	font-size: 4em;
 }
 
 h2 {
-	font-size: 2.1em;
+	font-size: 2em;
 	text-transform: uppercase;
 	line-height: 1.6;
 }
@@ -146,16 +146,14 @@ ul {
 \* --------------------------------------------------- */
 #hero {
 	width: 100%;
-	height: 105vh;
+	height: 100vh;
 	position: fixed;
 	background-image: url(../images/hero-side.jpg);
 	background-repeat: no-repeat;
-	background-position: center bottom;
+	background-position: center;
 	background-size: cover;
 	will-change: transform;
 	top: 0;
-
-	transition: all 0.5s ease;
 }
 
 
@@ -170,22 +168,39 @@ header {
 	height: 100vh;
 	width: 100%;
 	text-align: center;
-
-	transition: all 0.5s ease;
 }
 
 #catch {
 	position: absolute;
 	color: #fff;
 	bottom: 50%;
-	left: 30%;
+	left: 27%;
 	transform: translate(-50%, 50%);
 	padding-right: 1em;
 	padding-left: 1em;
 	text-align: left;
+	max-width: 35em;
+	width: 100%;
 }
 
-#catch h1 {
+#catch:after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 40%;
+	left: 50%;
+	padding: 8em 2em;
+	z-index: -1;
+	transform: translate(-50%, -50%) skewY(-16.8deg);
+	border-color: #fff;
+	border-style: solid;
+	border-width: 0.5em 0 0.5em 0;
+}
+
+#catch h1,
+#catch h2 {
 	text-shadow: 0 0 0.3em rgba(0,0,0,0.2);
 }
 
@@ -224,7 +239,7 @@ main::before {
 	display: block;
 	background: url(../images/nat-triangle.svg) no-repeat;
 	width: 100%;
-	max-width: 64em;
+	max-width: 60em;
 	height: 9.7em;
 	left: 50%;
 	position: absolute;
@@ -269,6 +284,10 @@ main::before {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+.social-title h3 {
+	text-shadow: 0 0 0.3em rgba(0,0,0,0.2);
 }
 
 .social-title img {
@@ -442,6 +461,7 @@ main::before {
 
 .desktop {
 	width: 100%;
+	max-width: 60em;
 	position: absolute;
 	top: 0;
 	transition: all 1s ease 200ms;
@@ -450,6 +470,7 @@ main::before {
 }
 
 .tablet {
+	max-width: 24em;
 	width: 40%;
 	position: absolute;
 	right: 4em;
@@ -460,6 +481,7 @@ main::before {
 }
 
 .mobile {
+	max-width: 10em;
 	width: 16.66%;
 	position: absolute;
 	bottom: -2em;
@@ -605,10 +627,6 @@ footer a img {
 \* --------------------------------------------------- */
 
 @media all and (max-width: 90em) {
-	#catch {
-		bottom: 32%;
-	}
-
 	main::before {
 		max-width: 45em;
 	}
@@ -619,9 +637,16 @@ footer a img {
 		font-size: 2.6em;
 	}
 
+	#hero {
+		background-image: url(../images/hero-center.jpg);
+	}
+
 	#catch {
-		bottom: 32%;
-		width: 80%;
+		left: 50%;
+	}
+
+	#catch::after {
+		content: normal;
 	}
 
 	#projects {
@@ -684,6 +709,10 @@ footer a img {
 		padding: 25vw 0 2em;
 	}
 
+	.project-block h1 {
+		font-size: 4em;
+	}
+
 	.mobile {
 		left: 32%;
 	}
@@ -731,6 +760,10 @@ footer a img {
 
 	#everyday {
 		padding: 4em 0 2em;
+	}
+
+	.project-block h1 {
+		font-size: 2em;
 	}
 
 	.project-block + .project-block {
