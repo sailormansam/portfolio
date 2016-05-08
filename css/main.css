@@ -209,7 +209,7 @@ header {
 main {
 	position: relative;
 	background-color: #fff;
-	box-shadow: 0 -20em 20em rgba(0,0,0,0.5);
+	box-shadow: 0 -15em 20em rgba(0,0,0,0.5);
 }
 
 main::before {
@@ -648,8 +648,8 @@ footer a img {
 	}
 
 	.wrapper {
-		padding-left: 1rem;
-		padding-right: 1rem;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
 	}
 
 	footer {
@@ -716,6 +716,19 @@ footer a img {
 
 	.project-block h1 {
 		font-size: 2em;
+	}
+
+	.technology {
+		margin: 1em 0;
+	}
+
+	.technology li {
+		font-size: 1.2em;
+	}
+
+	.media {
+		margin-top: 2em;
+		margin-bottom: 2em;
 	}
 
 	.project-block + .project-block {
