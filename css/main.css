@@ -657,7 +657,7 @@ footer a img {
 	}
 
 	.project-block h1 {
-		font-size: 4em;
+		font-size: 10vw;
 	}
 
 	.mobile {
@@ -694,10 +694,6 @@ footer a img {
 }
 
 @media all and (max-width: 35em) {
-	h3 {
-		font-size: 2em;
-	}
-
 	p {
 		font-size: 1em;
 	}
