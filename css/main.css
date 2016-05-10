@@ -707,11 +707,7 @@ footer a img {
 	}
 
 	#everyday {
-		padding: 4em 0 2em;
-	}
-
-	.project-block h1 {
-		font-size: 2em;
+		padding: 2em 0 0;
 	}
 
 	.technology {
@@ -733,5 +729,9 @@ footer a img {
 
 	.mobile {
 		bottom: -1em;
+	}
+
+	footer a {
+		width: 2.5em;
 	}
 }
