@@ -735,3 +735,13 @@ footer a img {
 		width: 2.5em;
 	}
 }
+
+@media all and (max-width: 25em) {
+	#everyday h2 {
+		font-size: 8vw;
+	}
+
+	.social-title img {
+		width: 2.5em;
+	}
+}
