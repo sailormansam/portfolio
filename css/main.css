@@ -660,8 +660,12 @@ footer a img {
 		font-size: 10vw;
 	}
 
+	.tablet {
+		right: 8%;
+	}
+
 	.mobile {
-		left: 32%;
+		left: 46%;
 	}
 }
 
