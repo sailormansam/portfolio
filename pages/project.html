@@ -1,56 +1,51 @@
 <div class="project-view">
 	<div ng-include="p.location"></div>
-
-	<div class="project-block">
-		<a href="/ombuds" class="project">
-			<h1>Ombuds</h1>
-			<svg viewBox="0 0 1024 620">
-				<image style="clip-path:url(#full-hex-large)" x="0" y="0" width="100%" height="100%" xlink:href="images/projects/ombuds/tile.jpg" />
-			</svg>
-		</a>
-		<div class="stripe" style="background-color:#90E4DF;"></div>
-	</div>
-	<div class="project-block">
-		<a href="/women-in-engineering" class="project">
-			<h1>Women in <br>Engineering</h1>
-			<svg viewBox="0 0 1024 620">
-				<image style="clip-path:url(#full-hex-large)" x="0" y="0" width="100%" height="100%" xlink:href="images/projects/women-in-engineering/tile.jpg" />
-			</svg>
-		</a>
-		<div class="stripe" style="background-color:#E5592E;"></div>
-	</div>
-	<div class="project-block">
-		<a href="/spectrum" class="project">
-			<h1>Spectrum</h1>
-			<svg viewBox="0 0 1024 620">
-				<image style="clip-path:url(#full-hex-large)" x="0" y="0" width="100%" height="100%" xlink:href="images/projects/spectrum/tile.jpg" />
-			</svg>
-		</a>
-		<div class="stripe" style="background-color:#20687f;"></div>
-	</div>
-	<div class="project-block">
-		<a href="/leafco" class="project">
-			<h1>Leaf Co.</h1>
-			<svg viewBox="0 0 1024 620">
-				<image style="clip-path:url(#full-hex-large)" x="0" y="0" width="100%" height="100%" xlink:href="images/projects/leafco/tile.jpg" />
-			</svg>
-		</a>
-		<div class="stripe" style="background-color:#a4b531;"></div>
-	</div>
-	<div class="project-block">
-		<a href="/impact" class="project">
-			<h1>Impact</h1>
-			<svg viewBox="0 0 1024 620">
-				<image style="clip-path:url(#full-hex-large)" x="0" y="0" width="100%" height="100%" xlink:href="images/projects/impact/tile.jpg" />
-			</svg>
-		</a>
-		<div class="stripe" style="background-color:#000000;"></div>
-	</div>
-
-	<a href="/" class="swipe">
-		<div class="cover">
-			<span>back</span>
+	
+	<section id="next-project" class="wrapper">
+		<div class="project-block">
+			<a href="/ombuds" class="project">
+				<h1>Ombuds</h1>
+				<svg viewBox="0 0 1024 620">
+					<image style="clip-path:url({{p.absUrl}}#full-hex)" x="0" y="0" width="100%" height="100%" xlink:href="images/projects/ombuds/tile.jpg" />
+				</svg>
+			</a>
+			<div class="stripe" style="background-color:#90E4DF;"></div>
 		</div>
-		back
-	</a>
+		<div class="project-block">
+			<a href="/women-in-engineering" class="project">
+				<h1>Women in <br>Engineering</h1>
+				<svg viewBox="0 0 1024 620">
+					<image style="clip-path:url({{p.absUrl}}#full-hex)" x="0" y="0" width="100%" height="100%" xlink:href="images/projects/women-in-engineering/tile.jpg" />
+				</svg>
+			</a>
+			<div class="stripe" style="background-color:#E5592E;"></div>
+		</div>
+		<div class="project-block">
+			<a href="/spectrum" class="project">
+				<h1>Spectrum</h1>
+				<svg viewBox="0 0 1024 620">
+					<image style="clip-path:url({{p.absUrl}}#full-hex)" x="0" y="0" width="100%" height="100%" xlink:href="images/projects/spectrum/tile.jpg" />
+				</svg>
+			</a>
+			<div class="stripe" style="background-color:#20687f;"></div>
+		</div>
+		<div class="project-block">
+			<a href="/leafco" class="project">
+				<h1>Leaf Co.</h1>
+				<svg viewBox="0 0 1024 620">
+					<image style="clip-path:url({{p.absUrl}}#full-hex)" x="0" y="0" width="100%" height="100%" xlink:href="images/projects/leafco/tile.jpg" />
+				</svg>
+			</a>
+			<div class="stripe" style="background-color:#a4b531;"></div>
+		</div>
+		<div class="project-block">
+			<a href="/impact" class="project">
+				<h1>Impact</h1>
+				<svg viewBox="0 0 1024 620">
+					<image style="clip-path:url({{p.absUrl}}#full-hex)" x="0" y="0" width="100%" height="100%" xlink:href="images/projects/impact/tile.jpg" />
+				</svg>
+			</a>
+			<div class="stripe" style="background-color:#000000;"></div>
+		</div>
+	</section>
 </div>

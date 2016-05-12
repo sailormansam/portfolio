@@ -86,12 +86,12 @@ ul {
 
 .wrapper:before,
 .wrapper:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+	content: " ";
+	display: table;
 }
 
 .wrapper:after {
-    clear: both;
+	clear: both;
 }
 
 .wrapper.small {
@@ -486,6 +486,33 @@ main::before {
 	text-transform: uppercase;
 	font-size: 1.5em;
 	margin: 0 0.5em;
+}
+
+#next-project {
+	margin-top: 8em;
+}
+
+#next-project .project-block:nth-child(even) .project {
+	float: right;
+}
+
+#next-project .project {
+	max-width: 52em;
+	float: left;
+}
+
+#next-project .project-block:before,
+#next-project .project-block:after {
+	content: " ";
+	display: table;
+}
+
+#next-project .project-block:after {
+	clear: both;
+}
+
+#next-project .project-block + .project-block {
+	margin-top: 6em;
 }
 
 
