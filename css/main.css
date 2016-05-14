@@ -679,12 +679,21 @@ footer a img {
 		padding-right: 1.5rem;
 	}
 
-	footer {
-		padding: 25vw 0 2em;
+	#projects {
+	}
+
+	.project {
+		width: 165%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.project-block {
+		overflow: hidden;
 	}
 
 	.project-block h1 {
-		font-size: 10vw;
+		font-size: 13vw;
 	}
 
 	.tablet {
@@ -693,6 +702,15 @@ footer a img {
 
 	.mobile {
 		left: 46%;
+	}
+
+	#next-project .project-block .project,
+	#next-project .project-block:nth-child(even) .project {
+		float: none;
+	}
+
+	footer {
+		padding: 25vw 0 2em;
 	}
 }
 
