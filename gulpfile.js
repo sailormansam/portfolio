@@ -8,13 +8,10 @@ var gulp = require('gulp'),
 	copy = require('gulp-copy'),
 	webserver = require('gulp-webserver'),
 	del = require('del'),
+	modRewrite  = require('connect-modrewrite'),
 	browserSync = require('browser-sync').create();
 
-gulp.task('default', ['del', 'minify-js', 'minify-css', 'imagemin', 'html-replace', 'copy-icon']);
-
-gulp.task('dev', function () {
-	gulp.start('sync');
-});
+gulp.task('default', ['del', 'minify-js', 'minify-css', 'imagemin', 'html-replace', 'copy-pages', 'copy-fonts', 'copy-icon']);
 
 gulp.task('del', function (cb) {
 	del(['dist/**', '!dist'], cb);
@@ -22,12 +19,18 @@ gulp.task('del', function (cb) {
 
 gulp.task('html-replace', ['del'], function () {
 	return gulp.src('index.html')
-		.pipe(htmlreplace({ js: 'js/main.min.js', css: 'css/main.min.css' }))
+		.pipe(htmlreplace({ 
+			js: {
+				src: [['js/main.min.js']],
+				tpl: '<script src="%s" defer></script>'
+			}, 
+			css: 'css/main.min.css' 
+		}))
 		.pipe(gulp.dest('dist'));
 });
 
 gulp.task('minify-js', ['del'], function () {
-	return gulp.src('js/**/*')
+	return gulp.src(['js/**/*', '!js/**/*hero.js'])
 		.pipe(concat('main.js'))
 		.pipe(uglify({ mangle: false }))
 		.pipe(rename({suffix: '.min'}))
@@ -35,7 +38,7 @@ gulp.task('minify-js', ['del'], function () {
 });
 
 gulp.task('minify-css', ['del'], function () {
-	return gulp.src('css/*.css')
+	return gulp.src(['css/normalize.css', 'css/main.css'])
 		.pipe(concat('main.css'))
 		.pipe(minifycss())
 		.pipe(rename({suffix: '.min'}))
@@ -43,9 +46,19 @@ gulp.task('minify-css', ['del'], function () {
 });
 
 gulp.task('imagemin', ['del'], function () {
-	return gulp.src('images/*')
+	return gulp.src('images/**/*')
 		.pipe(imagemin({progressive: true}))
 		.pipe(gulp.dest('dist/images'));
+});
+
+gulp.task('copy-fonts', ['del'], function () {
+	return gulp.src('fonts/**/*')
+		.pipe(copy('dist/fonts', { prefix: 1 }));
+});
+
+gulp.task('copy-pages', ['del'], function () {
+	return gulp.src('pages/**/*')
+		.pipe(copy('dist/pages', { prefix: 1 }));
 });
 
 gulp.task('copy-icon', ['del'], function () {
@@ -53,18 +66,28 @@ gulp.task('copy-icon', ['del'], function () {
 		.pipe(copy('dist', { prefix: 1 }));
 });
 
-gulp.task('webserver', function() {
-	gulp.src('/')
-		.pipe(webserver({
-			livereload: false,
-			open: true
-		}));
-});
-
-gulp.task('sync', function() {
+gulp.task('dev', function() {
     browserSync.init({
         server: {
-            baseDir: "./"
+            baseDir: "./",
+            middleware: [
+                modRewrite([
+                    '!\\.\\w+$ /index.html [L]'
+                ])
+            ]
+        }
+    });
+});
+
+gulp.task('test', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./dist",
+            middleware: [
+                modRewrite([
+                    '!\\.\\w+$ /index.html [L]'
+                ])
+            ]
         }
     });
 });
