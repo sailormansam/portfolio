@@ -1,6 +1,8 @@
 var app = angular.module('portfolio', ['ngRoute', 'ngAnimate']);
 
-app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+app.config(['$routeProvider', '$locationProvider', '$compileProvider', function($routeProvider, $locationProvider, $compileProvider) {
+	$compileProvider.debugInfoEnabled(false);
+
 	$routeProvider
 		.when('/', {
 			templateUrl : 'pages/home.html',
