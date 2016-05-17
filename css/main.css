@@ -696,6 +696,10 @@ footer a img {
 		font-size: 13vw;
 	}
 
+	.stripe {
+		display: none;
+	}
+
 	.tablet {
 		right: 8%;
 	}
