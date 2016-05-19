@@ -388,6 +388,26 @@ main::before {
 
 .project-view {
 	padding-bottom: 2em;
+	position: relative;
+}
+
+.project-view::after {
+	content: "";
+	display: block;
+	background: url(../images/nat-triangle.svg) no-repeat;
+	width: 100%;
+	max-width: 64em;
+	height: 9.7em;
+	left: 50%;
+	position: absolute;
+	background-size: 100%;
+	background-position: center bottom;
+	z-index: 1;
+}
+
+.project-view::after {
+	transform: translate(-50%, 98%) rotate(180deg);
+	bottom: 0;
 }
 
 .ng-enter .banner {
