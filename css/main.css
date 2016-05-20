@@ -513,12 +513,12 @@ main::before {
 }
 
 #next-project .project-block:nth-child(even) .project {
-	float: right;
+	/*float: right;*/
 }
 
 #next-project .project {
 	max-width: 52em;
-	float: left;
+	/*float: left;*/
 }
 
 #next-project .project-block:before,

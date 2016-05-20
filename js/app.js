@@ -6,6 +6,8 @@ app.config(['$routeProvider', '$locationProvider', '$compileProvider', function(
 	$routeProvider
 		.when('/', {
 			templateUrl : 'pages/home.html',
+			controller : 'HomeCtrl',
+			controllerAs: 'h'
 		})
 		.when('/ombuds', {
 			templateUrl : 'pages/project.html',
