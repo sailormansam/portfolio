@@ -760,10 +760,6 @@ footer a img {
 	#everydays {
 		max-width: 30em;
 	}
-
-	.project {
-		width: 85%;
-	}
 }
 
 @media all and (max-width: 35em) {
