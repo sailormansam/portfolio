@@ -165,7 +165,7 @@ ul {
 \* --------------------------------------------------- */
 header {
 	position: relative;
-	height: 100vh;
+	height: calc(100vh - 2em);
 	width: 100%;
 	text-align: center;
 	z-index: 1;
@@ -518,7 +518,6 @@ main::before {
 
 #next-project .project {
 	max-width: 52em;
-	/*float: left;*/
 }
 
 #next-project .project-block:before,

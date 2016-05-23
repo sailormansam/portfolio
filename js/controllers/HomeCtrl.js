@@ -18,7 +18,7 @@ app.controller('HomeCtrl', function () {
 	function resize() {
 		windowWidth = window.innerWidth;
 		windowHeight = window.innerHeight;
-		header.style.height = windowHeight + 'px';
-		hero.style.height = windowHeight + 'px';
+		header.style.height = windowHeight - 32 + 'px';
+		hero.style.height = windowHeight - 32 + 'px';
 	};
 });
