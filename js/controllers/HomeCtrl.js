@@ -3,6 +3,8 @@ app.controller('HomeCtrl', function () {
 	var windowHeight,
 		windowWidth;
 
+	var buffer = 32;
+
 	var header = document.getElementsByTagName('header')[0];
 	var hero = document.getElementById('hero');
 
@@ -18,7 +20,7 @@ app.controller('HomeCtrl', function () {
 	function resize() {
 		windowWidth = window.innerWidth;
 		windowHeight = window.innerHeight;
-		header.style.height = windowHeight - 32 + 'px';
-		hero.style.height = windowHeight - 32 + 'px';
+		header.style.height = windowHeight - buffer + 'px';
+		hero.style.height = windowHeight - buffer + 'px';
 	};
 });
