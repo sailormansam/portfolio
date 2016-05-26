@@ -699,6 +699,8 @@ footer a img {
 	}
 
 	#projects {
+		padding-left: 2em;
+		padding-right: 2em;
 	}
 
 	.project {
@@ -707,15 +709,15 @@ footer a img {
 		transform: translateX(-50%);
 	}
 
-	.project-block {
-		overflow: hidden;
-	}
-
 	.project-block h1 {
 		font-size: 13vw;
 	}
 
-	.stripe {
+	.project-block {
+		overflow: hidden;
+	}
+
+	.project-block .stripe {
 		display: none;
 	}
 
