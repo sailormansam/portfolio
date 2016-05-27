@@ -1,5 +1,15 @@
 <div class="project-view">
 	<div ng-include="p.location"></div>
+	<div class="wrapper project-nav-wrapper ">
+		<a href="/{{p.prev}}/" class="project-nav prev">
+			<h2>{{p.prev}}</h2>
+			<img ng-src="/images/projects/{{p.prev}}/tile.jpg" alt="Previous">
+		</a>
+		<a href="/{{p.next}}/" class="project-nav next">
+			<h2>{{p.next}}</h2>
+			<img ng-src="/images/projects/{{p.next}}/tile.jpg" alt="Next">
+		</a>
+	</div>
 </div>
 <footer>
 	<ul>

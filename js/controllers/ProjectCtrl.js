@@ -14,6 +14,6 @@ app.controller('ProjectCtrl', ['$location', function ($location) {
 	var currentIndex = this.projects.indexOf(this.project);
 
 	// set the previous and next projects to navigate to
-	this.next = this.project[(currentIndex + 1 > this.projects.length) ? 0 : currentIndex + 1];
-	this.prev = this.project[(currentIndex - 1 < 0) ? this.projects.length : currentIndex - 1];
+	this.next = this.projects[(currentIndex + 1 >= this.projects.length) ? 0 : currentIndex + 1];
+	this.prev = this.projects[(currentIndex - 1 < 0) ? this.projects.length - 1 : currentIndex - 1];
 }]);

@@ -512,10 +512,6 @@ main::before {
 	margin-top: 8em;
 }
 
-#next-project .project-block:nth-child(even) .project {
-	/*float: right;*/
-}
-
 #next-project .project {
 	max-width: 52em;
 }
@@ -532,6 +528,29 @@ main::before {
 
 #next-project .project-block + .project-block {
 	margin-top: 6em;
+}
+
+.project-nav-wrapper {
+	display: flex;
+	padding-top: 8em;
+}
+
+.project-nav {
+	width: 50%;
+	display: block;
+	position: relative;
+}
+
+.project-nav h2 {
+	position: absolute;
+	width: 100%;
+	color: #fff;
+	transform: translateY(-50%);
+	top: 50%;
+}
+
+.project-nav img {
+	width: 100%;
 }
 
 
