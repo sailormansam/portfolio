@@ -539,6 +539,7 @@ main::before {
 	width: 50%;
 	display: block;
 	position: relative;
+	padding: 0 2em;
 }
 
 .project-nav h2 {
