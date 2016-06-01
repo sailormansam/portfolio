@@ -536,10 +536,10 @@ main::before {
 }
 
 .project-nav {
-	width: 50%;
+	width: calc(50% - 4em);
 	display: block;
 	position: relative;
-	padding: 0 2em;
+	margin: 0 2em;
 }
 
 .project-nav h2 {
@@ -547,7 +547,8 @@ main::before {
 	color: #fff;
 	transform: translateY(-50%);
 	top: 50%;
-	width: calc(100% - 4rem);
+	width: 100%;
+	text-shadow: 0 0 0.3em rgba(0,0,0,0.2);
 }
 
 .project-nav img {
@@ -754,6 +755,19 @@ footer a img {
 		float: none;
 	}
 
+	.project-nav-wrapper {
+		padding-top: 6em;
+	}
+
+	.project-nav {
+		width: 50%;
+		margin: 0;
+	}
+
+	.project-nav h2 {
+		font-size: 4vw;
+	}
+
 	footer {
 		padding: 25vw 0 2em;
 	}
@@ -819,6 +833,18 @@ footer a img {
 
 	.mobile {
 		bottom: -1em;
+	}
+
+	.project-nav-wrapper {
+		display: block;
+	}
+
+	.project-nav {
+		width: 100%;
+	}
+
+	.project-nav h2 {
+		font-size: 6vw;
 	}
 
 	footer a {
