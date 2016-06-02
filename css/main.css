@@ -705,7 +705,6 @@ footer a img {
 }
 
 @media all and (max-width: 50em) {
-
 	h3 {
 		font-size: 2.5em;
 	}
@@ -773,6 +772,11 @@ footer a img {
 	}
 }
 
+@media all and (max-width: 45em) {
+	#hero {
+		background-image: url(../images/hero-small.jpg);
+	}
+}
 
 @media all and (max-width: 50em) and (orientation: landscape) {
 	#catch {
