@@ -148,7 +148,7 @@ ul {
 	width: 100%;
 	height: 100vh;
 	position: fixed;
-	background-image: url(../images/hero-side.jpg);
+	background-image: url(../images/hero-large.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -215,19 +215,16 @@ main {
 main::before {
 	content: "";
 	display: block;
-	background: url(../images/nat-triangle.svg) no-repeat;
-	width: 100%;
-	max-width: 40em;
-	height: 9.7em;
-	left: 50%;
+	border-left: 20em solid transparent;
+	border-right: 20em solid transparent;
+	border-bottom: 6em solid #fff;
 	position: absolute;
-	background-size: 100%;
-	background-position: center bottom;
+	left: 50%;
 }
 
 main::before {
-	transform: translate(-50%, -99%);
-	top: 1px;
+	transform: translate(-50%, -100%);
+	top: 0;
 }
 
 
@@ -297,11 +294,6 @@ main::before {
 	background-size: 100%;
 	background-position: center bottom;
 	z-index: 1;
-}
-
-#projects::before {
-	transform: translate(-50%, -99%);
-	top: 1px;
 }
 
 #projects::after {
@@ -670,13 +662,6 @@ footer a img {
 /* --------------------------------------------------- *\
 	_responsive
 \* --------------------------------------------------- */
-
-@media all and (max-width: 90em) {
-	main::before {
-		max-width: 40em;
-	}
-}
-
 @media all and (max-width: 70em) {
 	#hero {
 		position: relative;
@@ -695,16 +680,16 @@ footer a img {
 		text-align: center;
 	}
 
-	main::before {
-		max-width: 35em;
-	}
-
 	#projects {
 		padding: 4em 0;
 	}
 }
 
 @media all and (max-width: 50em) {
+	main::before {
+		border-width: 0 30vw 9vw 30vw;
+	}
+
 	h3 {
 		font-size: 2.5em;
 	}
@@ -784,10 +769,6 @@ footer a img {
 		font-size: 2vw;
 	}
 
-	main::before {
-		max-width: 25em;
-	}
-
 	main {
 		box-shadow: 0 -8em 20em rgba(0,0,0,0.5);
 	}
@@ -802,6 +783,10 @@ footer a img {
 }
 
 @media all and (max-width: 35em) {
+	main::before {
+		border-width: 0 50vw 15vw 50vw;
+	}
+
 	p {
 		font-size: 1em;
 	}

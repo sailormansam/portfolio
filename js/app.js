@@ -35,7 +35,7 @@ app.config(['$routeProvider', '$locationProvider', '$compileProvider', function(
 			controllerAs: 'p'
 		})
 		.otherwise({
-			templateUrl: 'pages/home.html',
+			templateUrl: 'pages/home.html'
 		});
 
 	$locationProvider.html5Mode(true);
