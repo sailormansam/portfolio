@@ -285,19 +285,16 @@ main::before {
 #projects::after {
 	content: "";
 	display: block;
-	background: url(../images/nat-triangle.svg) no-repeat;
-	width: 100%;
-	max-width: 64em;
-	height: 9.7em;
-	left: 50%;
+	border-left: 20em solid transparent;
+	border-right: 20em solid transparent;
+	border-top: 6em solid #fff;
 	position: absolute;
-	background-size: 100%;
-	background-position: center bottom;
+	left: 50%;
 	z-index: 1;
 }
 
 #projects::after {
-	transform: translate(-50%, 98%) rotate(180deg);
+	transform: translate(-50%, 100%);
 	bottom: 0;
 }
 
@@ -386,19 +383,16 @@ main::before {
 .project-view::after {
 	content: "";
 	display: block;
-	background: url(../images/nat-triangle.svg) no-repeat;
-	width: 100%;
-	max-width: 64em;
-	height: 9.7em;
-	left: 50%;
+	border-left: 20em solid transparent;
+	border-right: 20em solid transparent;
+	border-top: 6em solid #fff;
 	position: absolute;
-	background-size: 100%;
-	background-position: center bottom;
+	left: 50%;
 	z-index: 1;
 }
 
 .project-view::after {
-	transform: translate(-50%, 98%) rotate(180deg);
+	transform: translate(-50%, 100%);
 	bottom: 0;
 }
 
@@ -689,6 +683,11 @@ footer a img {
 	main::before {
 		border-width: 0 30vw 9vw 30vw;
 	}
+	
+	#projects::after,
+	.project-view::after {
+		border-width: 9vw 30vw 0 30vw;
+	}
 
 	h3 {
 		font-size: 2.5em;
@@ -785,6 +784,11 @@ footer a img {
 @media all and (max-width: 35em) {
 	main::before {
 		border-width: 0 50vw 15vw 50vw;
+	}
+	
+	#projects::after,
+	.project-view::after {
+		border-width: 15vw 50vw 0 50vw;
 	}
 
 	p {
