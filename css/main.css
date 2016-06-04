@@ -625,7 +625,7 @@ main::before {
 
 footer {
 	background-color: #493944;
-	padding: 12em 0 2em;
+	padding: 10em 0 2em;
 	position: relative;
 }
 
@@ -752,7 +752,7 @@ footer a img {
 	}
 
 	footer {
-		padding: 25vw 0 2em;
+		padding: 16vw 0 2em;
 	}
 }
 
@@ -838,6 +838,10 @@ footer a img {
 
 	.project-nav h2 {
 		font-size: 6vw;
+	}
+
+	footer {
+		padding: 25vw 0 2em;
 	}
 
 	footer a {
