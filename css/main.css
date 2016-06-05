@@ -519,6 +519,7 @@ main::before {
 .project-nav-wrapper {
 	display: flex;
 	padding-top: 8em;
+	padding-bottom: 2em;
 }
 
 .project-nav {
