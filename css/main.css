@@ -831,6 +831,8 @@ footer a img {
 
 	.project-nav-wrapper {
 		display: block;
+		padding-bottom: 0;
+		padding-top: 4em;
 	}
 
 	.project-nav {
