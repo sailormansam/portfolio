@@ -163,6 +163,19 @@ ul {
 /* --------------------------------------------------- *\
 	_header
 \* --------------------------------------------------- */
+#logo {
+	position: fixed;
+	z-index: 10;
+	left: 2em;
+	top: 2em;
+	display: block;
+	height: 5em;
+}
+
+#logo img {
+	height: 100%;
+}
+
 header {
 	position: relative;
 	height: calc(100vh - 2em);
@@ -188,11 +201,6 @@ header {
 #catch h2 {
 	text-transform: none;
 	line-height: 1.3;
-}
-
-#logo {
-	width: 5em;
-	height: auto;
 }
 
 #defs {
@@ -243,8 +251,8 @@ main::before {
 	margin-top: 6em;
 	margin-bottom: 4em;
 	display: flex;
-	padding-left: 0;
-	padding-right: 0;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
 }
 
 .half-hex-block {
@@ -703,6 +711,11 @@ footer a img {
 		padding-right: 1.5rem;
 	}
 
+	#logo {
+		top: 1.5em;
+		left: 1.5em;
+	}
+
 	#projects {
 		padding-left: 2em;
 		padding-right: 2em;
@@ -761,6 +774,11 @@ footer a img {
 	#hero {
 		background-image: url(../images/hero-small.jpg);
 	}
+
+	#projects {
+		padding-left: 1.5em;
+		padding-right: 1.5em;
+	}
 }
 
 @media all and (max-width: 50em) and (orientation: landscape) {
@@ -785,6 +803,11 @@ footer a img {
 @media all and (max-width: 35em) {
 	main::before {
 		border-width: 0 50vw 15vw 50vw;
+	}
+
+	#project {
+		padding-top: 2em;
+		padding-bottom: 2em;
 	}
 	
 	#projects::after,
