@@ -166,14 +166,29 @@ ul {
 #logo {
 	position: fixed;
 	z-index: 10;
-	left: 2em;
-	top: 2em;
 	display: block;
-	height: 5em;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 8em;
 }
 
 #logo img {
-	height: 100%;
+	height: 4em;
+	margin-top: 2em;
+}
+
+#logo:after {
+	content: "";
+	display: block;
+	border-left: 26.66em solid transparent;
+	border-right: 26.66em solid transparent;
+	border-top: 8em solid rgba(255,255,255,0.95);
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	top: 0;
+	z-index: -1;
 }
 
 header {
@@ -384,6 +399,7 @@ main::before {
 \* --------------------------------------------------- */
 
 .project-view {
+	margin-top: 6em;
 	padding-bottom: 2em;
 	position: relative;
 }
@@ -484,7 +500,7 @@ main::before {
 }
 
 .brief {
-	margin: 0.8em 0 0.3em;
+	padding: 0.8em 0 0;
 }
 
 .technology {
@@ -712,8 +728,6 @@ footer a img {
 	}
 
 	#logo {
-		top: 1.5em;
-		left: 1.5em;
 	}
 
 	#projects {
@@ -805,6 +819,18 @@ footer a img {
 		border-width: 0 50vw 15vw 50vw;
 	}
 
+	#logo {
+		height: 6em;
+	}
+
+	#logo img {
+		margin-top: 1em;
+	}
+
+	#logo:after {
+		border-width: 6em 20em 0 20em;
+	}
+
 	#project {
 		padding-top: 2em;
 		padding-bottom: 2em;
@@ -813,6 +839,10 @@ footer a img {
 	#projects::after,
 	.project-view::after {
 		border-width: 15vw 50vw 0 50vw;
+	}
+
+	.brief {
+		padding-top: 0;
 	}
 
 	p {
