@@ -108,7 +108,7 @@ ul {
 
 
 /* --------------------------------------------------- *\
-	_animation view
+	_view
 \* --------------------------------------------------- */
 
 @keyframes in {
@@ -179,8 +179,8 @@ ul {
 }
 
 #logo img {
-	height: 4em;
-	margin-top: 2em;
+	height: 5em;
+	margin-top: 1.5em;
 }
 
 #logo:after {
@@ -198,7 +198,7 @@ ul {
 
 header {
 	position: relative;
-	height: calc(100vh - 2em);
+	height: 100vh; 
 	width: 100%;
 	text-align: center;
 	z-index: 1;
@@ -253,8 +253,8 @@ main {
 .chevron::before {
 	content: "";
 	display: block;
-	border-left: 50vw solid #fff;
-	border-right: 50vw solid #fff;
+	border-left: 51vw solid #fff;
+	border-right: 51vw solid #fff;
 	border-top: 15vw solid transparent;
 	position: absolute;
 	left: 50%;
@@ -815,12 +815,29 @@ footer a img {
 
 @media all and (max-width: 50em) and (orientation: landscape) {
 	#catch {
-		bottom: 21%;
-		font-size: 2vw;
+		bottom: 10%;
+		font-size: 1.5vw;
+	}
+
+	#hero {
+		background-image: url(../images/portrait.jpg);
 	}
 
 	main {
-		box-shadow: 0 -8em 20em rgba(0,0,0,0.5);
+		box-shadow: 0 -2em 10em rgba(0,0,0,0.5);
+	}
+
+	#logo {
+		height: 6em;
+	}
+
+	#logo img {
+		height: 4em;
+		margin-top: 1em;
+	}
+
+	#logo:after {
+		border-width: 6em 20em 0 20em;
 	}
 
 	#everyday {
@@ -830,6 +847,14 @@ footer a img {
 	#everydays {
 		max-width: 30em;
 	}
+
+	.project {
+		width: 100%;
+	}
+
+	.project-block h1 {
+		font-size: 9vw;
+	}
 }
 
 @media all and (max-width: 35em) {
@@ -838,6 +863,7 @@ footer a img {
 	}
 
 	#logo img {
+		height: 4em;
 		margin-top: 1em;
 	}
 

@@ -3,7 +3,7 @@ app.controller('HomeCtrl', function () {
 	var windowHeight,
 		windowWidth;
 
-	var buffer = 32;
+	var buffer = 0;
 
 	var header = document.getElementsByTagName('header')[0];
 	var hero = document.getElementById('hero');
