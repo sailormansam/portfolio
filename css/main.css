@@ -121,19 +121,22 @@ ul {
 	100%	{ opacity: 0; }
 }
 
-.ng-enter { 
+#view.ng-enter { 
 	animation: in 400ms both ease-out;
-	animation-delay: 1000ms;
-	z-index: 20;
+	animation-delay: 400ms;
+	backface-visibility: hidden; 
 }
 
-.ng-leave { 
+#view.ng-leave { 
 	animation: out 400ms both ease-in;
-	z-index: 10;
+	backface-visibility: hidden; 
 }
 
 #view {
 	background-color: #fff;
+	z-index: 1;
+	position: absolute;
+	width: 100%;
 }
 
 
@@ -420,22 +423,6 @@ main {
 	margin-top: 6em;
 	padding-bottom: 2em;
 	position: relative;
-}
-
-.project-view::after {
-	content: "";
-	display: block;
-	border-left: 20em solid transparent;
-	border-right: 20em solid transparent;
-	border-top: 6em solid #fff;
-	position: absolute;
-	left: 50%;
-	z-index: 1;
-}
-
-.project-view::after {
-	transform: translate(-50%, 100%);
-	bottom: 0;
 }
 
 .ng-enter .banner {
@@ -941,7 +928,7 @@ footer a img {
 	}
 
 	footer {
-		padding: 25vw 0 2em;
+		padding: 30vw 0 2em;
 	}
 
 	footer a {

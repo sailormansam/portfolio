@@ -46,6 +46,6 @@ app.run(function ($rootScope, $timeout, $window) {
   $rootScope.$on('$routeChangeSuccess', function () {
     $timeout(function () {
       $window.scrollTo(0,0);
-    }, 700);
+    }, 400);
   });
 });
