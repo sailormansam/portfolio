@@ -1,4 +1,4 @@
-var app = angular.module('portfolio', ['ngRoute', 'ngAnimate']);
+var app = angular.module('appPortfolio', ['ngRoute', 'ngAnimate']);
 
 app.config(['$routeProvider', '$locationProvider', '$compileProvider', function($routeProvider, $locationProvider, $compileProvider) {
 	$compileProvider.debugInfoEnabled(false);
@@ -6,33 +6,39 @@ app.config(['$routeProvider', '$locationProvider', '$compileProvider', function(
 	$routeProvider
 		.when('/', {
 			templateUrl : 'pages/home.html',
-			controller : 'HomeCtrl',
-			controllerAs: 'h'
+			controller : 'HomeController',
+			controllerAs: 'h',
+			title: 'Sam Morrison'
 		})
 		.when('/ombuds', {
 			templateUrl : 'pages/project.html',
-			controller: 'ProjectCtrl',
-			controllerAs: 'p'
+			controller: 'ProjectController',
+			controllerAs: 'p',
+			title: 'Sam Morrison | Ombuds'
 		})
 		.when('/women-in-engineering', {
 			templateUrl : 'pages/project.html',
-			controller: 'ProjectCtrl',
-			controllerAs: 'p'
+			controller: 'ProjectController',
+			controllerAs: 'p',
+			title: 'Sam Morrison | Women In Engineering'
 		})
 		.when('/impact', {
 			templateUrl : 'pages/project.html',
-			controller: 'ProjectCtrl',
-			controllerAs: 'p'
+			controller: 'ProjectController',
+			controllerAs: 'p',
+			title: 'Sam Morrison | Impact'
 		})
 		.when('/spectrum', {
 			templateUrl : 'pages/project.html',
-			controller: 'ProjectCtrl',
-			controllerAs: 'p'
+			controller: 'ProjectController',
+			controllerAs: 'p',
+			title: 'Sam Morrison | Spectrum'
 		})
 		.when('/leafco', {
 			templateUrl : 'pages/project.html',
-			controller: 'ProjectCtrl',
-			controllerAs: 'p'
+			controller: 'ProjectController',
+			controllerAs: 'p',
+			title: 'Sam Morrison | Leaf co.'
 		})
 		.otherwise({
 			templateUrl: 'pages/home.html'
@@ -41,11 +47,17 @@ app.config(['$routeProvider', '$locationProvider', '$compileProvider', function(
 	$locationProvider.html5Mode(true);
 }]);
 
-// This is the key to view transition happiness! Mike Robinson
-app.run(function ($rootScope, $timeout, $window) {
-  $rootScope.$on('$routeChangeSuccess', function () {
-    $timeout(function () {
-      $window.scrollTo(0,0);
-    }, 400);
-  });
-});
+app.run(['$rootScope', '$timeout', '$window', function ($rootScope, $timeout, $window) {
+	// This is the key to view transition happiness! Mike Robinson
+	$rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+		$timeout(function () {
+			$window.scrollTo(0,0);
+		}, 600);
+
+		// test for current route
+        if(current.$$route) {
+            // Set current page title 
+            $rootScope.title = current.$$route.title;
+        }
+	});
+}]);

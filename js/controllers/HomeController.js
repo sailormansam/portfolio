@@ -1,4 +1,4 @@
-app.controller('HomeCtrl', function () {
+app.controller('HomeController', function () {
 	// set height of hero so it doesn't resize if the window viewport changes
 	var windowHeight,
 		windowWidth;

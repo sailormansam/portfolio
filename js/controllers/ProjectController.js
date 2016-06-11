@@ -1,4 +1,4 @@
-app.controller('ProjectCtrl', ['$location', function ($location) {
+app.controller('ProjectController', ['$location', function ($location) {
 	this.projects = [
 		'impact',
 		'leafco',

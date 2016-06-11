@@ -123,7 +123,7 @@ ul {
 
 #view.ng-enter { 
 	animation: in 400ms both ease-out;
-	animation-delay: 400ms;
+	animation-delay: 600ms;
 	backface-visibility: hidden; 
 }
 
@@ -137,6 +137,10 @@ ul {
 	z-index: 1;
 	position: absolute;
 	width: 100%;
+}
+
+.ng-leave #hero {
+	opacity: 0;
 }
 
 
