@@ -52,7 +52,7 @@ app.run(['$rootScope', '$timeout', '$window', function ($rootScope, $timeout, $w
 	$rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
 		$timeout(function () {
 			$window.scrollTo(0,0);
-		}, 600);
+		}, 700);
 
 		// test for current route
         if(current.$$route) {

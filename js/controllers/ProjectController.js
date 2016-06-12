@@ -1,18 +1,30 @@
 app.controller('ProjectController', ['$location', function ($location) {
 	this.projects = [
-		'impact',
-		'leafco',
-		'ombuds',
-		'spectrum',
-		'women-in-engineering'
-	];
-
-	this.names = [
-		'Impact',
-		'Leaf Co.',
-		'Ombuds',
-		'Spectrum',
-		'Women in Engineering'
+		{
+			url: 'impact',
+			title: 'Impact',
+			color: '#000000'
+		},
+		{
+			url: 'leafco',
+			title: 'Leaf Co.',
+			color: '#a4b531'
+		},
+		{
+			url: 'ombuds',
+			title: 'Ombuds',
+			color: '#90E4DF'
+		},
+		{
+			url: 'spectrum',
+			title: 'Spectrum',
+			color: '#20687f'
+		},
+		{
+			url: 'women-in-engineering',
+			title: 'Women in Engineering',
+			color: '#E5592E'
+		}
 	];
 
 	this.project = $location.path().substring(1);
@@ -20,7 +32,7 @@ app.controller('ProjectController', ['$location', function ($location) {
 
 	this.absUrl = $location.absUrl();
 
-	var currentIndex = this.projects.indexOf(this.project);
+	var currentIndex = this.projects.findIndex(x => x.url==this.project);
 
 	// set the previous and next projects to navigate to
 	var nextIndex = (currentIndex + 1 >= this.projects.length) ? 0 : currentIndex + 1;
@@ -28,7 +40,4 @@ app.controller('ProjectController', ['$location', function ($location) {
 
 	this.next = this.projects[nextIndex];
 	this.prev = this.projects[prevIndex];
-
-	this.nextTitle = this.names[nextIndex];
-	this.prevTitle = this.names[prevIndex];
 }]);

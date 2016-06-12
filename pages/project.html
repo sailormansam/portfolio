@@ -1,13 +1,19 @@
 <div class="project-view">
 	<div ng-include="p.location"></div>
 	<div class="wrapper project-nav-wrapper ">
-		<a href="/{{p.prev}}" class="project-nav prev">
-			<h2>{{p.prevTitle}}</h2>
-			<img ng-src="/images/projects/{{p.prev}}/tile.jpg" alt="Previous">
+		<a href="/{{p.next.url}}" class="project-nav next">
+			<div class="stripe" style="background-color:{{p.next.color}};"></div>
+			<h2>{{p.next.title}}</h2>
+			<svg viewBox="0 0 1024 620">
+				<image style="clip-path:url({{p.absUrl}}#full-hex)" x="0" y="0" width="100%" height="100%" xlink:href="" ng-href="/images/projects/{{p.next.url}}/tile.jpg" />
+			</svg>
 		</a>
-		<a href="/{{p.next}}" class="project-nav next">
-			<h2>{{p.nextTitle}}</h2>
-			<img ng-src="/images/projects/{{p.next}}/tile.jpg" alt="Next">
+		<a href="/{{p.prev.url}}" class="project-nav prev">
+			<div class="stripe" style="background-color:{{p.prev.color}};"></div>
+			<h2>{{p.prev.title}}</h2>
+			<svg viewBox="0 0 1024 620">
+				<image style="clip-path:url({{p.absUrl}}#full-hex)" x="0" y="0" width="100%" height="100%" xlink:href="" ng-href="/images/projects/{{p.prev.url}}/tile.jpg" />
+			</svg>
 		</a>
 	</div>
 	<div class="chevron-bottom"></div>

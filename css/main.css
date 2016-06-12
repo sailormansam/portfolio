@@ -123,7 +123,7 @@ ul {
 
 #view.ng-enter { 
 	animation: in 400ms both ease-out;
-	animation-delay: 600ms;
+	animation-delay: 700ms;
 	backface-visibility: hidden; 
 }
 
@@ -266,7 +266,7 @@ main {
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
-	bottom: 0;
+	bottom: -1px; /* hides small gap on mobile devices */
 }
 
 
@@ -343,7 +343,7 @@ main {
 	left: 50%;
 	z-index: 1;
 	transform: translateX(-50%);
-	top: 0;
+	top: -1px; /* this hides a small gap on mobile devices */
 }
 
 .project {
@@ -399,19 +399,38 @@ main {
 	transform: skewY(-16.8deg) scaleX(0);
 	transform-origin: center;
 	transition: all 0.5s ease;
+	z-index: -1;
+}
+
+.project:hover + .stripe {
+	transform: skewY(-16.8deg) scaleX(1);
 }
 
 .project-block:nth-child(even) .project + .stripe {
 	transform: skewY(16.8deg) scaleX(0);
 }
 
-.project:hover + .stripe {
-	width: 100%;
-	transform: skewY(-16.8deg) scaleX(1);
-}
-
 .project-block:nth-child(even) .project:hover + .stripe {
 	transform: skewY(16.8deg) scaleX(1);
+}
+
+.project-nav .stripe {
+	transition: all 400ms cubic-bezier(0.55, 0.06, 0.68, 0.19);
+}
+
+.project-nav.prev .stripe {
+	transform: skewY(16.8deg) scaleX(0);
+	transition: all 400ms cubic-bezier(0.55, 0.06, 0.68, 0.19);
+}
+
+.project-nav.next:hover .stripe {
+	transform: skewY(-16.8deg) scaleX(1);
+	transition: all 400ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.project-nav.prev:hover .stripe {
+	transform: skewY(16.8deg) scaleX(1);
+	transition: all 400ms cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 
@@ -527,28 +546,6 @@ main {
 	margin: 0 0.5em;
 }
 
-#next-project {
-	margin-top: 8em;
-}
-
-#next-project .project {
-	max-width: 52em;
-}
-
-#next-project .project-block:before,
-#next-project .project-block:after {
-	content: " ";
-	display: table;
-}
-
-#next-project .project-block:after {
-	clear: both;
-}
-
-#next-project .project-block + .project-block {
-	margin-top: 6em;
-}
-
 .project-nav-wrapper {
 	display: flex;
 	padding-top: 8em;
@@ -569,12 +566,21 @@ main {
 	top: 50%;
 	width: 100%;
 	text-shadow: 0 0 0.3em rgba(0,0,0,0.2);
+	padding: 0 1em;
+	line-height: 1.2;
 }
 
 .project-nav img {
 	width: 100%;
 }
 
+.project-nav.next {
+	order: 2;
+}
+
+.project-nav.prev {
+	order: 1;
+}
 
 
 
@@ -768,11 +774,6 @@ footer a img {
 
 	.mobile {
 		left: 46%;
-	}
-
-	#next-project .project-block .project,
-	#next-project .project-block:nth-child(even) .project {
-		float: none;
 	}
 
 	.project-nav-wrapper {
