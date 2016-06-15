@@ -403,7 +403,7 @@ main {
 
 .project:hover + .stripe {
 	transform: skewY(-16.8deg) scaleX(1);
-	transition: all 500ms cubic-bezier(0.22, 0.61, 0.36, 1);
+	transition: all 550ms cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 .project-block:nth-child(even) .project + .stripe {
@@ -412,7 +412,7 @@ main {
 
 .project-block:nth-child(even) .project:hover + .stripe {
 	transform: skewY(16.8deg) scaleX(1);
-	transition: all 500ms cubic-bezier(0.22, 0.61, 0.36, 1);
+	transition: all 550ms cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 .project-nav .stripe {
@@ -853,6 +853,10 @@ footer a img {
 }
 
 @media all and (max-width: 35em) {
+	h2 {
+		font-size: 1.5em;
+	}
+
 	#logo {
 		height: 6em;
 	}
@@ -898,6 +902,10 @@ footer a img {
 
 	#everyday {
 		padding: 2em 0 0;
+	}
+
+	.title {
+		padding: 1em 0;
 	}
 
 	.technology {
