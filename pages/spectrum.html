@@ -7,8 +7,14 @@
 	<div class="stripe" style="background-color:#20687f;"></div>
 	<section class="media wrapper">
 		<section class="website">
-			<img class="desktop" ng-src="images/projects/{{p.project}}/desktop.jpg" alt="{{p.project}} desktop">
-			<img class="tablet" ng-src="images/projects/{{p.project}}/tablet-landscape.jpg" alt="{{p.project}} tablet">
+			<picture>
+				<source ng-srcset="images/projects/{{p.project}}/desktop-m.jpg" media="(max-width: 35em)">
+				<img class="desktop" ng-src="images/projects/{{p.project}}/desktop.jpg" alt="{{p.project}} desktop">
+			</picture>
+			<picture>
+				<source ng-srcset="images/projects/{{p.project}}/tablet-landscape-m.jpg" media="(max-width: 35em)">
+				<img class="tablet" ng-src="images/projects/{{p.project}}/tablet-landscape.jpg" alt="{{p.project}} tablet">
+			</picture>
 		</section>
 	</section>
 </div>
