@@ -32,7 +32,7 @@ app.controller('ProjectController', ['$location', function ($location) {
 
 	this.absUrl = $location.absUrl();
 
-	var currentIndex = this.projects.findIndex(x => x.url==this.project);
+	var currentIndex = this.projects.findIndex(function(x){ return x.url==this.project }, this);
 
 	// set the previous and next projects to navigate to
 	var nextIndex = (currentIndex + 1 >= this.projects.length) ? 0 : currentIndex + 1;
