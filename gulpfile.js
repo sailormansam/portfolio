@@ -29,6 +29,19 @@ gulp.task('html-replace', ['del'], function () {
 		.pipe(gulp.dest('dist'));
 });
 
+gulp.task('html-replace-prod', ['del'], function () {
+	return gulp.src('index.html')
+		.pipe(htmlreplace({ 
+			js: {
+				src: [['js/main.min.js']],
+				tpl: '<script src="%s" defer></script>'
+			}, 
+			css: 'css/main.min.css',
+			seo: ''
+		}))
+		.pipe(gulp.dest('dist'));
+});
+
 gulp.task('minify-js', ['del'], function () {
 	return gulp.src('js/**/*.js')
 		.pipe(concat('main.js'))
