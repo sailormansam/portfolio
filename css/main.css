@@ -178,11 +178,8 @@ ul {
 	top: 0;
 	left: 0;
 	right: 0;
-}
-
-#logo.fixed {
-	position: fixed;
-	top: 0;
+	transition: all 400ms ease;
+	transform: translateY(0);
 }
 
 #logo img {
