@@ -2,15 +2,13 @@
 	_fonts
 \* --------------------------------------------------- */
 @font-face {
-    font-family: 'fabrica';
-    src: url('../fonts/fabrica/fabrica-webfont.eot');
-    src: url('../fonts/fabrica/fabrica-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/fabrica/fabrica-webfont.woff2') format('woff2'),
-         url('../fonts/fabrica/fabrica-webfont.woff') format('woff'),
-         url('../fonts/fabrica/fabrica-webfont.ttf') format('truetype'),
-         url('../fonts/fabrica/fabrica-webfont.svg#fabrica') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'fabrica';
+	src: url('../fonts/fabrica/fabrica-webfont.woff2') format('woff2'),
+		 url('../fonts/fabrica/fabrica-webfont.woff') format('woff'),
+		 url('../fonts/fabrica/fabrica-webfont.ttf') format('truetype'),
+		 url('../fonts/fabrica/fabrica-webfont.svg#fabrica') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 
@@ -263,7 +261,6 @@ main {
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
-	bottom: -1px; /* hides small gap on mobile devices */
 }
 
 
@@ -281,7 +278,6 @@ main {
 #everydays {
 	margin-top: 6em;
 	margin-bottom: 4em;
-	display: flex;
 	padding-left: 1.5em;
 	padding-right: 1.5em;
 }
@@ -292,6 +288,7 @@ main {
 	position: relative;
 	width: 50%;
 	padding-top: 60.5%;
+	float: left;
 }
 
 .half-hex-block svg {
@@ -565,7 +562,6 @@ main {
 }
 
 .project-nav-wrapper {
-	display: flex;
 	padding-top: 8em;
 	padding-bottom: 2em;
 }
@@ -576,6 +572,7 @@ main {
 	position: relative;
 	margin: 0 2em;
 	padding-top: 26.3%;
+	float: right;
 }
 
 .project-nav h2 {
@@ -599,15 +596,6 @@ main {
 .project-nav img {
 	width: 100%;
 }
-
-.project-nav.next {
-	order: 2;
-}
-
-.project-nav.prev {
-	order: 1;
-}
-
 
 
 
@@ -722,6 +710,7 @@ footer a img {
 /* --------------------------------------------------- *\
 	_responsive
 \* --------------------------------------------------- */
+
 @media all and (max-width: 70em) {
 	#hero {
 		position: relative;
@@ -777,7 +766,7 @@ footer a img {
 	}
 
 	.project {
-		width: 165%;
+		width: 140%;
 		left: 50%;
 		transform: translateX(-50%);
 		padding-top: 0;
@@ -792,7 +781,7 @@ footer a img {
 
 	.project-block {
 		overflow: hidden;
-		padding-top: 92.5%;
+		padding-top: 84.7%;
 	}
 
 	.project-block .stripe,
@@ -835,6 +824,14 @@ footer a img {
 	#projects {
 		padding-left: 1.5em;
 		padding-right: 1.5em;
+	}
+
+	.project {
+		width: 150%;
+	}
+
+	.project-block {
+		padding-top: 90.8%;
 	}
 }
 
@@ -907,6 +904,10 @@ footer a img {
 	#project {
 		padding-top: 2em;
 		padding-bottom: 2em;
+	}
+
+	.chevron::before {
+		bottom: -1px; /* hides small gap on mobile devices */
 	}
 
 	.chevron-bottom {
@@ -1008,5 +1009,36 @@ footer a img {
 
 	.social-title img {
 		width: 2.5em;
+	}
+}
+
+
+
+
+
+
+/* --------------------------------------------------- *\
+	_IE and Edge background jitter fix
+\* --------------------------------------------------- */
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	#hero {
+		position: relative;
+	}
+
+	header {
+		position: absolute;
+		top: 0;
+	}
+}
+
+@supports (-ms-accelerator:true) {
+	#hero {
+		position: relative;
+	}
+
+	header {
+		position: absolute;
+		top: 0;
 	}
 }
