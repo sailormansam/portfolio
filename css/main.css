@@ -291,6 +291,13 @@ main {
 	color: #fff;
 	position: relative;
 	width: 50%;
+	padding-top: 60.5%;
+}
+
+.half-hex-block svg {
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 .social-title {
@@ -298,6 +305,7 @@ main {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	z-index: 1;
 }
 
 .social-title h2 {
@@ -352,6 +360,7 @@ main {
 	max-width: 64em;
 	margin: 0 auto;
 	z-index: 5;
+	padding-top: 60.5%;
 }
 
 .project + .project {
@@ -372,10 +381,18 @@ main {
 
 .project-block {
 	position: relative;
+	max-width: 64em;
+	margin: 0 auto;
 }
 
 .project-block + .project-block {
 	margin-top: 8em;
+}
+
+.project-block svg {
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 
 .project-block h1 {
@@ -387,6 +404,7 @@ main {
 	transform: translate(-50%, -50%);
 	text-shadow: 0 0 0.3em rgba(0,0,0,0.2);
 	line-height: 1;
+	z-index: 1;
 }
 
 .stripe {
@@ -557,6 +575,7 @@ main {
 	display: block;
 	position: relative;
 	margin: 0 2em;
+	padding-top: 26.3%;
 }
 
 .project-nav h2 {
@@ -568,6 +587,13 @@ main {
 	text-shadow: 0 0 0.3em rgba(0,0,0,0.2);
 	padding: 0 1em;
 	line-height: 1.2;
+	z-index: 1;
+}
+
+.project-nav svg {
+	position: absolute;
+	left: 0;
+	top: 0;
 }
 
 .project-nav img {
@@ -754,6 +780,10 @@ footer a img {
 		width: 165%;
 		left: 50%;
 		transform: translateX(-50%);
+		padding-top: 0;
+		position: absolute;
+		top: 0;
+		height: 100%;
 	}
 
 	.project-block h1 {
@@ -762,6 +792,7 @@ footer a img {
 
 	.project-block {
 		overflow: hidden;
+		padding-top: 92.5%;
 	}
 
 	.project-block .stripe,
@@ -784,6 +815,7 @@ footer a img {
 	.project-nav {
 		width: calc(50% - 2em);
 		margin: 0 1em;
+		padding-top: 27.6%;
 	}
 
 	.project-nav h2 {
@@ -940,6 +972,7 @@ footer a img {
 	.project-nav {
 		width: 100%;
 		margin: 0;
+		padding-top: 60.5%;
 	}
 
 	.next {
