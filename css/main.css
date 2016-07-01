@@ -874,6 +874,10 @@ footer a img {
 		width: 100%;
 	}
 
+	.project-block {
+		padding-top: 60.5%;
+	}
+
 	.project-block h1 {
 		font-size: 9vw;
 	}
