@@ -910,10 +910,6 @@ footer a img {
 		padding-bottom: 2em;
 	}
 
-	.chevron::before {
-		bottom: -1px; /* hides small gap on mobile devices */
-	}
-
 	.chevron-bottom {
 		height: 15vw;
 		bottom: -15vw;
