@@ -65,6 +65,7 @@ app.controller('ProjectController', ['$location', function ($location) {
 	var prevIndex = (currentIndex - 1 < 0) ? this.projects.length - 1 : currentIndex - 1;
 
 	this.next = this.projects[nextIndex];
+	this.current = this.projects[currentIndex];
 	this.prev = this.projects[prevIndex];
 
 }]);
