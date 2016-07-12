@@ -38,7 +38,7 @@ app.config(['$routeProvider', '$locationProvider', '$compileProvider', function(
 			templateUrl : 'pages/project.html',
 			controller: 'ProjectController',
 			controllerAs: 'p',
-			title: 'Sam Morrison | Leaf co.'
+			title: 'Sam Morrison | Leaf Co.'
 		})
 		.otherwise({
 			templateUrl: 'pages/home.html'
