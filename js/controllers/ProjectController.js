@@ -1,32 +1,5 @@
-app.controller('ProjectController', ['$location', function ($location) {
-	this.projects = [
-		{
-			url: 'impact',
-			title: 'Impact',
-			color: '#000000'
-		},
-		{
-			url: 'leafco',
-			title: 'Leaf Co.',
-			color: '#a4b531'
-		},
-		{
-			url: 'ombuds',
-			title: 'Ombuds',
-			color: '#90E4DF'
-		},
-		{
-			url: 'spectrum',
-			title: 'Spectrum',
-			color: '#20687f'
-		},
-		{
-			url: 'women-in-engineering',
-			title: 'Women in Engineering',
-			color: '#E5592E'
-		}
-	];
-
+app.controller('ProjectController', ['$location', 'ProjectService', function ($location, ProjectService) {
+	this.projects = ProjectService.projects;
 
 	// indexof polyfill
 	if (!Array.prototype.findIndex) {
@@ -67,5 +40,4 @@ app.controller('ProjectController', ['$location', function ($location) {
 	this.next = this.projects[nextIndex];
 	this.current = this.projects[currentIndex];
 	this.prev = this.projects[prevIndex];
-
 }]);

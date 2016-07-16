@@ -1,4 +1,6 @@
-app.controller('HomeController', function () {
+app.controller('HomeController', ['ProjectService' , function (ProjectService) {
+	this.projects = ProjectService.projects;
+
 	// set height of hero so it doesn't resize if the window viewport changes
 	var windowHeight,
 		windowWidth;
@@ -23,4 +25,4 @@ app.controller('HomeController', function () {
 		header.style.height = windowHeight - buffer + 'px';
 		hero.style.height = windowHeight - buffer + 'px';
 	};
-});
+}]);
