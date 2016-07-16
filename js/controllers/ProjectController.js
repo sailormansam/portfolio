@@ -1,7 +1,7 @@
 app.controller('ProjectController', ['$location', 'ProjectService', function ($location, ProjectService) {
 	this.projects = ProjectService.projects;
 
-	// indexof polyfill
+	// findIndex polyfill
 	if (!Array.prototype.findIndex) {
 		Array.prototype.findIndex = function(predicate) {
 			if (this === null) {
@@ -25,19 +25,19 @@ app.controller('ProjectController', ['$location', 'ProjectService', function ($l
 		};
 	}
 
-	this.project = $location.path().substring(1);
+	this.projectUrl = $location.path().substring(1);
 
 	this.location = 'pages' + $location.path() + '.html';
 
 	this.absUrl = $location.absUrl();
 
-	var currentIndex = this.projects.findIndex(function(x){ return x.url==this.project }, this);
+	var currentIndex = this.projects.findIndex(function(x){ return x.url==this.projectUrl }, this);
 
 	// set the previous and next projects to navigate to
 	var nextIndex = (currentIndex + 1 >= this.projects.length) ? 0 : currentIndex + 1;
 	var prevIndex = (currentIndex - 1 < 0) ? this.projects.length - 1 : currentIndex - 1;
 
-	this.next = this.projects[nextIndex];
-	this.current = this.projects[currentIndex];
-	this.prev = this.projects[prevIndex];
+	this.nextProject = this.projects[nextIndex];
+	this.project = this.projects[currentIndex];
+	this.prevProject = this.projects[prevIndex];
 }]);

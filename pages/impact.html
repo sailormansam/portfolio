@@ -6,16 +6,16 @@
 	<li>jQuery</li>
 </ul>
 <div class="media-container">
-	<div class="stripe" ng-style="{ 'background-color': p.current.color }"></div>
+	<div class="stripe" ng-style="{ 'background-color': p.project.color }"></div>
 	<section class="media wrapper">
 		<section class="website">
 			<picture>
-				<source ng-srcset="images/projects/{{p.project}}/desktop-m.jpg" media="(max-width: 35em)">
-				<img class="desktop" ng-src="images/projects/{{p.project}}/desktop.jpg" alt="{{p.project}} desktop">
+				<source ng-srcset="images/projects/{{p.projectUrl}}/desktop-m.jpg" media="(max-width: 35em)">
+				<img class="desktop" ng-src="images/projects/{{p.projectUrl}}/desktop.jpg" alt="{{p.projectUrl}} desktop">
 			</picture>
 			<picture>
-				<source ng-srcset="images/projects/{{p.project}}/tablet-landscape-m.jpg" media="(max-width: 35em)">
-				<img class="tablet" ng-src="images/projects/{{p.project}}/tablet-landscape.jpg" alt="{{p.project}} tablet">
+				<source ng-srcset="images/projects/{{p.projectUrl}}/tablet-landscape-m.jpg" media="(max-width: 35em)">
+				<img class="tablet" ng-src="images/projects/{{p.projectUrl}}/tablet-landscape.jpg" alt="{{p.projectUrl}} tablet">
 			</picture>
 		</section>
 	</section>
