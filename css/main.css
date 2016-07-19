@@ -555,11 +555,16 @@ main {
 .technology li {
 	display: inline-block;
 	font-weight: bold;
-	font-family: montserrat;
+	font-family: Montserrat, sans-serif;
 	color: #bfbfbf;
 	text-transform: uppercase;
 	font-size: 1.5em;
 	margin: 0 0.5em;
+}
+
+.video {
+	margin-top: 2em;
+	margin-bottom: 2em;
 }
 
 .video-wrapper {
@@ -624,7 +629,7 @@ main {
 	color: #493944;
 	font-size: 1.5em;
 	font-weight: bold;
-	font-family: Montserrat;
+	font-family: Montserrat, sans-serif;
 	text-transform: uppercase;
 	padding: 0 0.5em;
 	margin: 1.6rem 0;
