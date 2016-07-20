@@ -2,14 +2,14 @@ app.factory('ProjectService', function() {
 	return {
 		projects : [
 			{
+				url: 'impact',
+				title: 'Impact',
+				color: '#000000'
+			},
+			{
 				url: 'ombuds',
 				title: 'Ombuds',
 				color: '#90E4DF'
-			},
-			{
-				url: 'women-in-engineering',
-				title: 'Women in Engineering',
-				color: '#E5592E'
 			},
 			{
 				url: 'spectrum',
@@ -22,9 +22,9 @@ app.factory('ProjectService', function() {
 				color: '#a4b531'
 			},
 			{
-				url: 'impact',
-				title: 'Impact',
-				color: '#000000'
+				url: 'women-in-engineering',
+				title: 'Women in Engineering',
+				color: '#E5592E'
 			}
 		]
 	};

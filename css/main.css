@@ -273,7 +273,7 @@ main {
 \* --------------------------------------------------- */
 
 #everyday {
-	padding: 4em 0 8em;
+	padding: 8em 0;
 }
 
 #everydays {
@@ -794,13 +794,13 @@ footer a img {
 		height: 100%;
 	}
 
-	.project-block h1 {
-		font-size: 12vw;
-	}
-
 	.project-block {
 		overflow: hidden;
 		padding-top: 84.7%;
+	}
+
+	.project-block h1 {
+		font-size: 12vw;
 	}
 
 	.project-block .stripe,
