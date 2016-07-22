@@ -1,4 +1,4 @@
-var app = angular.module('appPortfolio', ['ngRoute', 'ngAnimate']);
+var app = angular.module('appPortfolio', ['ngRoute', 'ngAnimate', 'ngTouch']);
 
 app.config(['$routeProvider', '$locationProvider', '$compileProvider', function($routeProvider, $locationProvider, $compileProvider) {
 	$compileProvider.debugInfoEnabled(false);
