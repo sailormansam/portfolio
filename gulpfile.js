@@ -11,7 +11,8 @@ var gulp = require('gulp'),
 	modRewrite  = require('connect-modrewrite'),
 	browserSync = require('browser-sync').create();
 
-gulp.task('default', ['del', 'minify-js', 'minify-css', 'imagemin', 'html-replace', 'copy-pages', 'copy-fonts', 'copy-icon']);
+gulp.task('default', ['del', 'minify-js', 'minify-css', 'imagemin', 'html-replace', 'html-replace-prod', 'copy-pages', 'copy-fonts', 'copy-icon']);
+gulp.task('staging', ['del', 'minify-js', 'minify-css', 'imagemin', 'html-replace', 'copy-pages', 'copy-fonts', 'copy-icon']);
 
 gulp.task('del', function (cb) {
 	del(['dist/**', '!dist'], cb);
