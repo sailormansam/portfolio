@@ -37,5 +37,11 @@ app.controller('TemplateController', ['$interval', '$scope', function($interval,
 		scroll(loop);
 	}
 
-	loop();
+	// only call if not mobile
+	if( window.innerWidth > 560) {
+		loop();
+	}
+	else {
+		this.showShadow = true;
+	}
 }]);
