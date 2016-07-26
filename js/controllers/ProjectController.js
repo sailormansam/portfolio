@@ -1,5 +1,6 @@
 app.controller('ProjectController', ['$location', 'ProjectService', function ($location, ProjectService) {
 	this.projects = ProjectService.projects;
+	this.absUrl = $location.absUrl();
 
 	// findIndex polyfill
 	if (!Array.prototype.findIndex) {
@@ -28,8 +29,6 @@ app.controller('ProjectController', ['$location', 'ProjectService', function ($l
 	this.projectUrl = $location.path().substring(1);
 
 	this.location = 'pages' + $location.path() + '.html';
-
-	this.absUrl = $location.absUrl();
 
 	var currentIndex = this.projects.findIndex(function(x){ return x.url==this.projectUrl }, this);
 

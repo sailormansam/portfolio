@@ -1,4 +1,4 @@
-app.controller('HomeController', ['ProjectService' , function (ProjectService) {
+app.controller('HomeController', ['$location', 'ProjectService' , function ($location, ProjectService) {
 	this.projects = ProjectService.projects;
 
 	// set height of hero so it doesn't resize if the window viewport changes
