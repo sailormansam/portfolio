@@ -198,8 +198,8 @@ ul {
 	top: 0;
 	z-index: -1;
 
-	transition: -webkit-filter 250ms cubic-bezier(0.55, 0.06, 0.68, 0.19),
-				filter 250ms cubic-bezier(0.55, 0.06, 0.68, 0.19);
+	transition: -webkit-filter 200ms cubic-bezier(0.55, 0.06, 0.68, 0.19),
+				filter 200ms cubic-bezier(0.55, 0.06, 0.68, 0.19);
 }
 
 #logo.shadow:after {
