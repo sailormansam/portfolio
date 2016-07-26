@@ -35,12 +35,13 @@
 	<script src="js/controllers/TemplateController.js" defer></script>
 
 	<script src="js/services/ProjectService.js" defer></script>
+	<script src="js/services/ShadowService.js" defer></script>
 	<!-- endbuild -->
 
 	<base href="/">
 </head>
 <body ng-controller="TemplateController as t">
-	<div id="logo" ng-class="{'shadow': t.showShadow}">
+	<div id="logo" ng-class="{'shadow': t.show.shadow}">
 		<a href="/">
 			<img src="images/logo.svg" alt="logo">
 		</a>

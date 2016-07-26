@@ -47,17 +47,26 @@ app.config(['$routeProvider', '$locationProvider', '$compileProvider', function(
 	$locationProvider.html5Mode(true);
 }]);
 
-app.run(['$rootScope', '$timeout', '$window', function ($rootScope, $timeout, $window) {
-	// This is the key to view transition happiness! Mike Robinson
-	$rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+app.run(['$rootScope', '$timeout', '$window', 'ShadowService', function ($rootScope, $timeout, $window, ShadowService) {
+	// Wait for view content to load
+	$rootScope.$on('$viewContentLoaded', function (event, current, previous) {
 		$timeout(function () {
 			$window.scrollTo(0,0);
+			ShadowService.getData().hold = false;
 		}, 700);
+	});
+
+	// This is the key to view transition happiness! Mike Robinson
+	$rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+		// hide header shadow
+		var show = ShadowService.getData();
+		show.shadow = false;
+		show.hold = true;
 
 		// test for current route
-        if(current.$$route) {
-            // Set current page title 
-            $rootScope.title = current.$$route.title;
-        }
+		if(current.$$route) {
+			// Set current page title 
+			$rootScope.title = current.$$route.title;
+		}
 	});
 }]);

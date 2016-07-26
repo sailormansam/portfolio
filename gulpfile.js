@@ -52,7 +52,7 @@ gulp.task('minify-js', ['del'], function () {
 });
 
 gulp.task('minify-css', ['del'], function () {
-	return gulp.src(['css/normalize.css', 'css/main.css'])
+	return gulp.src(['css/fix.css', 'css/main.css'])
 		.pipe(concat('main.css'))
 		.pipe(minifycss())
 		.pipe(rename({suffix: '.min'}))

@@ -1,7 +1,7 @@
-app.controller('TemplateController', ['$interval', '$scope', function($interval, $scope){
-	var self = this;
-	this.showShadow = false;
+app.controller('TemplateController', ['$interval', '$scope', 'ShadowService', function($interval, $scope, ShadowService){
 	var lastPosition = -1;
+	var self = this;
+	this.show = ShadowService.getData();
 
 	// Detect request animation frame for scroll event
 	// https://gist.github.com/Warry/4254579
@@ -14,7 +14,7 @@ app.controller('TemplateController', ['$interval', '$scope', function($interval,
 				 function(callback){ window.setTimeout(callback, 1000/60) };
 
 	function loop(){
-		 // Avoid calculations if not needed
+		// Avoid calculations if not needed
 		var top = window.pageYOffset;
 
 		if (lastPosition == top) {
@@ -25,12 +25,13 @@ app.controller('TemplateController', ['$interval', '$scope', function($interval,
 		}
 
 		// make sure angular scope gets updated
+		// if not held by page transition
 		$scope.$evalAsync(function(){
-			if (top > 0) {
-				self.showShadow = true;	
+			if (top > 0 && !self.show.hold) {
+				self.show.shadow = true;
 			}
 			else {
-				self.showShadow = false;
+				self.show.shadow = false;
 			}
 		});
 
@@ -42,6 +43,6 @@ app.controller('TemplateController', ['$interval', '$scope', function($interval,
 		loop();
 	}
 	else {
-		this.showShadow = true;
+		self.show.shadow = true;
 	}
 }]);
