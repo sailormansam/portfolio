@@ -2,6 +2,11 @@ app.factory('ProjectService', function() {
 	return {
 		projects : [
 			{
+				url: 'after-hours',
+				title: 'After Hours',
+				color: '#4D9E90'
+			},
+			{
 				url: 'impact',
 				title: 'Impact',
 				color: '#000000'

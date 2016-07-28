@@ -40,6 +40,12 @@ app.config(['$routeProvider', '$locationProvider', '$compileProvider', function(
 			controllerAs: 'p',
 			title: 'Sam Morrison | Leaf Co.'
 		})
+		.when('/after-hours', {
+			templateUrl : 'pages/project.html',
+			controller: 'ProjectController',
+			controllerAs: 'p',
+			title: 'Sam Morrison | After Hours'
+		})
 		.otherwise({
 			templateUrl: 'pages/home.html'
 		});

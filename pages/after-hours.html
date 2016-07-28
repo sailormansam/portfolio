@@ -1,0 +1,36 @@
+<h3 class="brief">After Hours</h3>
+<ul class="technology">
+	<li>HTML</li>
+	<li>CSS</li>
+	<li>JS</li>
+	<li>Pencil</li>
+	<li>Paper</li>
+</ul>
+<div class="media-container">
+	<div class="stripe" ng-style="{ 'background-color': p.project.color }"></div>
+	<section class="media wrapper">
+		<section class="website">
+			<picture>
+				<source ng-srcset="images/projects/{{p.projectUrl}}/desktop-m.jpg" media="(max-width: 35em)">
+				<img class="desktop" ng-src="images/projects/{{p.projectUrl}}/desktop.jpg" alt="{{p.projectUrl}} desktop">
+			</picture>
+			<picture>
+				<source ng-srcset="images/projects/{{p.projectUrl}}/tablet-landscape-m.jpg" media="(max-width: 35em)">
+				<img class="tablet" ng-src="images/projects/{{p.projectUrl}}/tablet-landscape.jpg" alt="{{p.projectUrl}} tablet">
+			</picture>
+		</section>
+	</section>
+</div>
+<section class="wrapper small">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem ipsum vel earum recusandae consequuntur, est molestias officiis distinctio necessitatibus, fugit quasi consectetur dicta. Eaque, esse labore quis deleniti placeat illum.</p>
+
+	<h2 class="title" ng-style="{ 'color': p.project.color }">365 Days of Drawing</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi accusamus ut quam aut dolore impedit, animi et voluptate id sunt temporibus vel veniam repudiandae! Possimus cum voluptatibus accusamus quidem itaque.</p>
+	
+	<h2 class="title" ng-style="{ 'color': p.project.color }">Coding Everyday</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime dignissimos aspernatur perferendis dolorem blanditiis quam corrupti fugit, non recusandae odio illo exercitationem alias unde officia cum vel ipsam nesciunt. Assumenda.</p>
+
+	<h2 class="title" ng-style="{ 'color': p.project.color }">Moving Forward</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis odit a esse ipsum maxime illo, architecto hic tenetur, similique reiciendis aperiam magni unde. Ipsa nostrum, veritatis ut eum dignissimos hic.</p>
+
+</section>
