@@ -7,36 +7,6 @@
 </header>
 <main ng-controller="ProjectController as p">
 	<div class="chevron"></div>
-	<section id="everyday">
-		<h2 class="title">
-			Create<br>
-			Every<br>
-			Day
-		</h2>
-		<div class="wrapper small">
-			<p>I create every day to practice bringing new ideas to life through drawing and coding, learning new techniques and developing myself along the way.</p>
-		</div>
-		<article id="everydays" class="wrapper small">
-			<a class="half-hex-block" href="//github.com/sailormansam" target="_blank">
-				<div class="social-title">
-					<img class="social" src="images/github.svg" alt="github logo">
-					<h2>Daily Code</h2>
-				</div>
-				<svg viewBox="0 0 387 468">
-					<image style="clip-path:url({{p.absUrl}}#half-hex)" width="100%" height="100%" xlink:href="images/object-practice.jpg"></image>
-				</svg>
-			</a>
-			<a class="half-hex-block" href="//www.instagram.com/sailormansam/" target="_blank">
-				<div class="social-title">
-					<img class="social" src="images/instagram.svg" alt="instagram logo">
-					<h2>Daily Art</h2>
-				</div>
-				<svg viewBox="0 0 387 468">
-					<image style="clip-path:url({{p.absUrl}}#half-hex)" width="100%" height="100%" xlink:href="images/desert-pillars.jpg"></image>
-				</svg>
-			</a>
-		</article>
-	</section>
 	<section id="projects">
 		<div class="project-wrapper" ng-repeat="project in h.projects">
 			<div class="project-block">
